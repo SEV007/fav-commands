@@ -1,0 +1,64 @@
+###########################
+## Use mysql by terminal ##
+###########################
+
+./opt/lampp/bin/mysql -u user -p pass
+
+
+Task: Mysql list databases
+
+mysql is a simple command-line tool. mysql is command line and it is very easy to use. Invoke it from the prompt of your command interpreter as follows:
+$ mysql
+Output:
+
+mysql>
+You may need to provide mysql username, password and hostname, use:
+$ mysql --user=your-user-name --password=your-password 
+mysql>
+
+To list database type the following command
+
+mysql> show databases;
+Output:
+
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
++--------------------+
+2 rows in set (0.00 sec)
+information_schema and mysql are name of databases. To use these database and to list available tables type the following two commands:
+mysql> use mysql;Output:
+
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+Database changed
+Now list tables:
+mysql> show tables;Output:
+
++---------------------------+
+| Tables_in_mysql           |
++---------------------------+
+| columns_priv              |
+| db                        |
+| func                      |
+| help_category             |
+| help_keyword              |
+| help_relation             |
+| help_topic                |
+| host                      |
+| proc                      |
+| procs_priv                |
+| tables_priv               |
+| time_zone                 |
+| time_zone_leap_second     |
+| time_zone_name            |
+| time_zone_transition      |
+| time_zone_transition_type |
+| user                      |
++---------------------------+
+17 rows in set (0.00 sec)
+mysql>
+
+###########################

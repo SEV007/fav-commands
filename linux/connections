@@ -1,0 +1,24 @@
+########################################
+## LINUX CONNECTIONS LIST BY TERMINAL ##
+########################################
+
+netstat
+
+sudo netstat -tup ### Show connections to the machine and service name
+
+sudo bash -c “netstat -an | grep LISTEN | grep -v ^unix”
+sudo netstat -ntulp
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+lsof
+
+lsof | grep IPv4
+
+sudo lsof -i -n -P
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+nethogs
+
+########################################

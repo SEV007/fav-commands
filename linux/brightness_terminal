@@ -1,0 +1,15 @@
+###########################################
+## Display Brightness Adjust by Terminal ##
+###########################################
+
+xrandr --output LVDS1 --brightness 0.9
+
+adjust the display brightness by terminal
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+xgamma -gamma 0.72
+
+adjust the display contrast by terminal
+
+############################################

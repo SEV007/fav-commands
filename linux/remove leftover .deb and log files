@@ -1,0 +1,8 @@
+#5 - Remove leftover .deb and log files
+
+
+You can remove .deb files that are left over from installs. you only want to keep these around for if you need to reinstall, and even then apt/synaptic can re-download them.
+sudo rm -v /var/cache/apt/archives/*.deb
+
+You can also remove old log files. logrotate (installed by default in Ubuntu) archives log files as gunzip files. you might want to keep these in case you need to do some deep troubleshooting. I've never needed them though.
+sudo rm -v /var/log/*.gz
