@@ -1,0 +1,5 @@
+
+get-command | where { $_.parameters.keys -contains "ComputerName" -and $_.parameters.keys -notcontain
+s "Session"}
+
+http://technet.microsoft.com/en-us/library/dd819505.aspx

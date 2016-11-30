@@ -1,0 +1,25 @@
+Collect and print logs data
+
+wevtutil enum-logs
+
+show list of all log registrys
+
+----------------------------------
+
+wevutil gl "Application"
+
+show information about particular log registry
+
+----------------------------------
+
+show data in readable text format: (/f:text)
+
+wevtutil qe "Application" /f:text
+
+
+
+show data in xml format: (f/:xml)
+
+wevtutil qe "Application" /f:xml
+
+----------------------------------

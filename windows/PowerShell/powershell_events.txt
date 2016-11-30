@@ -1,0 +1,6 @@
+Get-Help Get-WinEvent -examples
+
+Get-WinEvent application
+Get-WinEvent -listlog *
+
+Get-EventLog application

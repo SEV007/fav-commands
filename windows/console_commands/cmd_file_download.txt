@@ -1,0 +1,16 @@
+BITSadmin
+
+Examples:
+
+bitsadmin /transfer myDownloadJob /download /priority normal http://downloadsrv/10mb.zip c:\10mb.zip
+
+bitsadmin /addfile myDownloadJob http://downloadsrv/10mb.zip c:\10mb.zip
+
+bitsadmin /resume myDownloadJob
+
+bitsadmin /list
+
+-------------------------------------------------------------------------------
+Source:
+
+http://msdn.microsoft.com/en-us/library/windows/desktop/aa362812(v=vs.85).aspx

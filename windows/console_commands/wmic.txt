@@ -1,0 +1,8 @@
+
+Recoge una lista de programas instalados en el sistema y filtra por "Google Talk Plugin"
+
+>>> wmic product get name | find "Google Talk Plugin"
+
+Llama a proceso uninstall de producto donde el nombre es igual a "Google Talk Plugin"
+
+>>> product where name="Google Talk Plugin" call uninstall

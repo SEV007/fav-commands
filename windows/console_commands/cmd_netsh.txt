@@ -1,0 +1,36 @@
+netsh modify network configuration.
+allow wifi connection by cmd.
+allow firewall configuration
+
+comando netsh 
+se puede utilizar entre otras cosas para cambiar los parametros de la red desde linea de comandos... 
+
+ejemplo de funcionamiento: 
+
+netsh interface ip set address name=LAN source=static addr=192.168.1.4 mask=255.255.255.0 gateway=192.168.1.1 gwmetric1 
+netsh interface ip set dns name=LAN source=static addr=80.58.0.33 
+netsh interface ip add dns name=LAN addr=80.58.32.97
+
+conexion a red inalambrica netsh
+
+primero agregamos la red en la lista de permitidas
+------------------------------------------------------------------------
+netsh wlan add filter permission=allow ssid=PB-Mesh networktype=adhoc
+
+para ver la lista de perfiles
+--------------------------------------
+show profile
+
+para mostrar la configuracion de algun perfil en particular
+----------------------------------------------------------------------------------
+show profile PB-Mesh
+
+para ver lista detallada de todos los perfiles de todas las redes e interfaces
+-------------------------------------------------------------------------------------------------------------
+show all
+
+para crear un perfil que no existe usamos la interfaz grafica
+
+para modificad parametros del perfil de red
+--------------------------------------------------------------
+netsh wlan set profileparameter name=PB-Mesh interface=Wi-Fi SSIDname=PB-Mesh ConnectionType=ibss

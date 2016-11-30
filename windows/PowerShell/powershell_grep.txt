@@ -1,0 +1,4 @@
+grep equivalent in powershell
+>>> | Select-String
+
+ls | Select-String "audacious*"

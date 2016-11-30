@@ -1,0 +1,121 @@
+Ping: nos informa del estado de un host. Es necesario permitir paquetes icmp para su funcionamiento. 
+
+Ping -t: se hace ping hasta que que pulsemos Ctrl+C para detener los envíos. 
+
+Ping -a: devuelve el nombre del host. 
+
+Ping -l: establece el tamaño del buffer. Por defecto el valor es 32. 
+
+Ping -f: impide que se fragmenten los paquetes. 
+
+Ping -n (valor): realiza la prueba de ping durante un determinado numero de ocasiones. 
+
+Ping -i TTL: permite cambiar el valor del TTL. TTL seria sustituido por el nuevo valor. 
+
+Ping -r (nº de saltos): indica los host por los que pasa nuestro ping. (máximo 9) 
+
+Ping -v TOS: se utiliza en redes avanzadas para conocer la calidad del servicio. 
+
+TRACERT: INDICA LA RUTA POR LA QUE PASA NUESTRA PETICION HASTA LLEGAR AL HOST DESTINO. 
+
+Tracert -d: no resuelve los nombres del dominio. 
+
+Tracert -h (valor): establece un nº máximo de saltos. 
+
+PATCHPING: MEZCLA ENTRE EL COMANDO PING Y TRACERT. 
+
+PatchPing -h (nº de saltos): nº máximo de saltos. 
+
+PatchPing -n: no se resuelven los nombres de host. 
+
+PatchPing -6: obliga a utilizar IPV6 
+
+IPCONFIG: PROPORCIONA INFORMACION SOBRE TCP/IP, ADAPTADORES, ETC ETC. 
+
+Ipconfig: muestra información general sobre la red 
+
+Ipconfig /all: ofrece información detallada sobre todas las t. de red y conexiones activas. 
+
+Ipconfig /renew: renueva petición a un servidor DHCP 
+
+Ipconfig /release: libera la Ip asignada por DHCP 
+
+Ipconfig /registerdns: registra todos los nombres DNS 
+
+Ipconfig /flushdns: borrar todas las entradas DNS. 
+
+
+NET DIVERSAS FUNCIONES 
+
+Net Send: Envía un mensaje a traves del servicio mensajero 
+
+Net Start: Inicia un servicio de Windows 
+
+Net Stop: Detiene un servicio de Windows 
+
+Net Share: Indica que recursos comparte la maquina 
+
+Net View: Indica a que máquinas se tiene acceso mediante la red 
+
+Net Sessions: Indica quienes han entrado en nuestros recursos compartidos 
+
+Net Time * /SET: Sincroniza la hora con una maquina de la red 
+
+Net User: Crea o elimina usuarios 
+
+Net Localgroup: Crea o elimina grupos 
+
+Netstat: Muestra todas las conexiones activas en el equipo. 
+
+Netstat -a: nos muestra todas las conexiones y puertos. 
+
+Netstat -e: muestras las estadísticas Ethernet 
+
+Netstat -n muestra direcciones y puertos en forma de numero. 
+
+Netstat -o: muestra que programa esta asociado a la conexión activa 
+
+Netstat - p (protocolo): permite especificar que protocolo se desea ver. TCP/UDP 
+
+Netstat -s: muestra estadísticas clasificas por protocolo. 
+
+Nbtstat: util para resolver problemas entre Ips y Netbios. 
+
+Nbtstat -c: lista los nombres Netbios y los relaciona a una IP. 
+
+ARP: MUESTRA Y MODIFICA DATOS DE LA TABLA DE TRADUCCION DE DIRECCIONES IP A DIRECCIONES MAC (TABLA ARP) 
+
+Arp -a (también -g): muestra la tabla ARP para cada uno de los interfaces 
+
+Arp -s (dir_ip) (dir_MAC) [dir_interfaz]: añade una entrada especifica a la tabla ARP. Si hay varios interfaces de red, añadiendo al final la direccion IP del interfaz, lo añade en la tabla correspondiente a ese interfaz 
+
+Arp -d (dir_ip) [dir_interfaz]: elimina una entrada especifica de la tabla ARP. Se pueden usar comodines en la direccion IP. Si hay varios interfaces de red, añadiendo al final la direccion IP del interfaz, lo elimina de la tabla correspondiente a ese interfaz. 
+
+Route: muestra y modifica la información sobre las rutas IP del equipo. 
+
+Route PRINT: muestra la tabla completa de rutas 
+
+Route ADD (red_destino) MASK (mascara_destino) (puerta de enlace) [METRIC metrica] [IF interfaz]: Añade una ruta. Con el modificador -p (route add -p ...) hace la ruta persistente, de manera que se mantendra aunque se reinicie el equipo. 
+
+Route DEL (red_destino) MASK (mascara_Destino) [puerta de enlace]: Elimina la ruta especificada. Admite caracteres comodines. 
+
+Route CHANGE (red_destino) MASK (mascara_destino) (IP_salida/siguiente salto) [METRIC metrica] [IF interfaz]: Modifica la metrica, o la puerta de enlace en una ruta existente 
+
+NOTA: parametros entre parentesis () son obligatorios y entre corchetes [] son opcionales.
+
+
+
+Por Cardoomx TFTP lo que hace es transferir archivos de un sitio a otro se necesita un servidor en uno de los dos ordenadores y funciona mas o menos asi. 
+
+TFTP [-i] host [GET | PUT] origen  Funciona tanto en redes locales como por internet ( abriendo puerto claro ). A mi parcer es una utilidad muy muy buena cuando conectas por shell a un pc para administrarlo. Claro esta que no todo el mundo lo usa con buenos fines. 
+
+
+
+comando netsh 
+se puede utilizar entre otras cosas para cambiar los parametros de la red desde linea de comandos... 
+
+ejemplo de funcionamiento: 
+
+netsh interface ip set address name=LAN source=static addr=192.168.1.4 mask=255.255.255.0 gateway=192.168.1.1 gwmetric1 
+netsh interface ip set dns name=LAN source=static addr=80.58.0.33 
+netsh interface ip add dns name=LAN addr=80.58.32.97

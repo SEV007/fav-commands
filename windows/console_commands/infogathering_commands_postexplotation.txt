@@ -1,0 +1,7 @@
+wusa
+systeminfo | Select-Strinug "KB"
+wmic qfe list
+wmic qfe list full
+wmic qfe list full | Select-String "Caption"
+reg query "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall" /s | findstr /B ".*DisplayName
+-----------

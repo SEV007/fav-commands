@@ -1,0 +1,11 @@
+Redireccionamientos [editar]
+
+< - Redireccionamiento de la entrada estándar. Su sintaxis es comando < fichero.
+> - Redireccionamiento de la salida estándar. Su sintaxis es comando > fichero.
+>> - Redireccionamiento de la salida estándar a un fichero existente. Su sintaxis es comando >> fichero.
+Filtros [editar]
+
+| - Pipe o tubería, concatena comandos.
+| more - Separa por páginas la salida estándar, (Ejemplo: DIR | MORE).
+| sort - Ordena por orden alfabético la salida estándar.
+| find - Busca una cadena de texto en la salida estándar.
