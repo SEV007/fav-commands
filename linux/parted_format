@@ -1,0 +1,18 @@
+parted /dev/sdb
+print
+
+mklabel msdos
+print
+
+mkpart
+	primary
+	fat32
+	0%
+	-1s
+
+set 1 boot on
+
+mkfs.ntfs -f /dev/sdb1
+
+some more tools
+gdisk cgdisk

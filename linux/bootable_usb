@@ -1,0 +1,3 @@
+dd if=/home/$user/Downloads/Image.iso of=/dev/sdb
+
+DO NOT SET of= TO SDB PARTITIONS LIKE sdb1!!!
