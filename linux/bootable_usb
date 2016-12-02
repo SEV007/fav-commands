@@ -1,3 +1,14 @@
 dd if=/home/$user/Downloads/Image.iso of=/dev/sdb
 
 DO NOT SET of= TO SDB PARTITIONS LIKE sdb1!!!
+
+
+
+clone cd/dvd to image.iso
+
+dd if=/dev/cdrom of=/home/usuario/imagendeldisco.iso
+
+set copy blocks size for slower or faster speeds. Slower is better. More secure.
+(1MB is OK)
+
+dd if=/dev/cdrom of=/home/usuario/imagendeldisco.iso bs=1M
