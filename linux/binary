@@ -1,0 +1,8 @@
+Reading binary files
+
+readelf -a <file>
+
+example:
+
+readelf -a /bin/cat
+readelf -a /usr/lib/gcc/file
