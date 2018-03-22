@@ -5,6 +5,8 @@ qemu-img create -f qcow2 kali.qcow2 30G
 
 qemu-system-x86_64 -hda ./kali.qcow2 -boot d -cdrom /media/nfs/iso/kali-linux-1.0.5-i386.iso  -m 2048 -enable-kvm -usb
 
+-enable-kvm (set parameter for Intel VT-x and AMD-V CPU)
+
 convert
 
 qemu-img convert -f vdi -O raw vboxMachine.vdi qemuMachine.img
