@@ -1,0 +1,1 @@
+qemu-system-x86_64 -cdrom /home/user/CentOS-7-x86_64-DVD-1708.iso -hda xenp.qcow2 -usb -m 1024 -enable-kvm -vga qxl -netdev user,id=mynet0,net=192.168.0.0/24,dhcpstart=192.168.0.9

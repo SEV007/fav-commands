@@ -1,0 +1,1 @@
+qemu-system-x86_64 -hda xen_project.qcow2 -usb -m 1536 -enable-kvm

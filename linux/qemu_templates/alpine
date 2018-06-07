@@ -1,0 +1,1 @@
+qemu-system-x86_64 -hda ./alpine.qcow2 -usb -m 1024 -enable-kvm
