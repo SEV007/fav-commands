@@ -1,0 +1,10 @@
+#!/bin/bash
+
+console_path="$USER@$(hostname):/"
+
+printf $console_path" enter package_name "
+
+read package_name
+
+apt-get install $package_name
+
