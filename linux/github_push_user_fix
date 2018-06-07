@@ -1,0 +1,25 @@
+GitHub wrong user push solution
+
+git config --global push.default simple
+
+
+it looks like my terminal does the commits with my username, but pushes them with the other one
+
+Author and committer name and email (which are important for GitHub) are derived from:
+
+git config user.name
+git config user.email
+However, as mentioned in git config and git commit-tree, those values can be overridden by environment variables:
+
+GIT_AUTHOR_NAME
+GIT_AUTHOR_EMAIL
+GIT_COMMITTER_NAME
+GIT_COMMITTER_EMAIL
+So double-check those variables.
+
+Things work back normally if I force the user in the .git/config of a repository but I don't think that's the good option.
+
+But it should be a good solution.
+When using an https url, I always specify the user in it to make sure the authentication is done with the right user.
+
+http://USER@github.com/USER/REPO.git
