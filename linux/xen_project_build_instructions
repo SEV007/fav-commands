@@ -1,0 +1,65 @@
+https://wiki.xenproject.org/wiki/Xen_Project_Beginners_Guide
+
+https://major.io/2015/08/21/understanding-systemds-predictable-network-device-names/
+
+https://askubuntu.com/questions/704361/why-is-my-network-interface-named-enp0s25-instead-of-eth0
+
+https://wiki.xen.org/wiki/Network_Configuration_Examples_(Xen_4.1%2B)
+
+https://www.centos.org/docs/5/
+
+https://www.thegeekstuff.com/2010/08/how-to-create-lvm/
+
+https://blog.xenproject.org/2014/02/14/ballooning-rebooting-and-the-feature-youve-never-heard-of/
+
+https://tipstricks.itmatrix.eu/stopstart-a-single-xen-virtual-machine/
+
+https://wiki.debian.org/BridgeNetworkConnections
+
+https://serverfault.com/questions/222010/difference-between-xen-pv-xen-kvm-and-hvm
+
+https://wiki.xenproject.org/wiki/Tuning_Xen_for_Performance
+
+https://xenbits.xen.org/docs/unstable/man/xl.1.html
+
+http://www.virtuatopia.com/index.php/Configuring_a_VNC_based_Graphical_Console_for_a_Xen_Paravirtualized_domainU_Guest
+
+https://wiki.xenproject.org/wiki/DomU_Support_for_Xen
+
+xl create /path/to/vm_config_file.cfg -c
+
+
+
+
+events.linuxfoundation.org/
+
+#### https://blog.hypriot.com/ ####
+https://blog.hypriot.com/post/how-to-setup-rpi-docker-swarm/
+
+
+
+pv-grub install
+
+https://wiki.xen.org/wiki/PvGrub
+find / | grep pv-grub
+
+
+fedora pv-grub
+
+https://community.riocities.com/fedora_xen_domu.html
+
+
+# Asterisk PBX
+# RasPBX
+http://www.raspberry-asterisk.org/
+
+
+alpine
+
+??? https://www.linkedin.com/pulse/setting-up-alpine-linux-370-domu-vm-xenserver-72-ali-poursamadi
+
+https://community.riocities.com/alpine_domU.html
+https://wiki.alpinelinux.org/wiki/Installation
+
+
+https://www.youtube.com/watch?v=lgMwLcYVvHI
