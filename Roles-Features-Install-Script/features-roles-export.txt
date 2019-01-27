@@ -1,0 +1,6 @@
+PS C:\Users\Administrator> Get-WindowsFeature | Select-Object -Property Name, InstallState | Select Name | Export-Csv C:\Roles.csv -NoTypeInfor
+mation -Verbose
+
+Import-Csv C:\scripts\Roles.csv | foreach{Add-WindowsFeature $_.name  }
+
+https://www.ntweekly.com/2017/04/17/export-installed-roles-and-features-on-windows-server-2016-and-2012/
