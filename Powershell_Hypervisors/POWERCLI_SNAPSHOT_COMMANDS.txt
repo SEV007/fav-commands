@@ -1,0 +1,45 @@
+START VM
+start-vm FreeNAS
+
+GET VM DATASTORE / SNAPSHOTS
+get-vm FreeNAS
+Get-Datastore -Name *
+Get-Datastore -Name DS1
+get-vm -Datastore DS1
+
+get-vm freenas | get-snapshot
+
+-------------------------------------------------------------------------------
+CREATE VM SNAPSHOTS
+get-vm freenas | new-snapshot -Name "SNAP001" -Description "FreeNAS POWERCLI SNAPSHOT 001" -Quiesce -Memory
+
+get-vm freenas | new-snapshot -Name "SNAP001" -Description "FreeNAS POWERCLI SNAPSHOT 001" -Quiesce -Memory -whatif
+
+-WHATIF OUTPUT [Pre-Check Command Execution Resume]
+	What if: Performing the operation "Creating snapshot - Name: FreeNAS SNAP001,
+	Description: FreeNAS POWERCLI SNAPSHOT TEST 001,
+	Memory: True, Quiesce: True" on target "VirtualMachine-27".
+-------------------------------------------------------------------------------
+
+GET VM SNAPSHOT DETAILED INFO
+get-snapshot -vm FreeNAS -name "FreeNAS SNAP001" | Select *
+
+
+-SNAPSHOT MORE DETAILED INFO SNAPSHOT
+get-snapshot * | Group VM |
+Add-Member -membertype ScriptProperty -Name TotalSnapshotSizeMB -value {
+$stat = $this.group | Measure-Object -property SizeMB -sum
+[math]::Round($stat.sum,2)
+} -passthru |
+Select Name,Count,TotalSnapshotSizeMB |
+Sort TotalSnapshotSizeMB –Descending
+-------------------------------------------------------------------------------
+
+REMOVE SNAPSHOT
+get-snapshot -name * -vm freenas | remove-snapshot
+get-snapshot -name * -vm freenas | remove-snapshot -whatif
+get-snapshot -name "SNAP001" -vm freenas | remove-snapshot
+get-snapshot -name "SNAP001" -vm freenas | remove-snapshot -confirm
+
+-WHATIF OUTPUT [Pre-Check Command Execution Resume]
+	What if: Performing the operation "Removing snapshot." on target "VirtualMachineSnapshot-27-snapshot-2".

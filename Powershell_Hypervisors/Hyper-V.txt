@@ -1,0 +1,24 @@
+BACKUP WITH HIS
+https://www.altaro.com/hyper-v/copy-hyper-v-vhd-file-virtual-machine-running/
+
+HYPERV HIS
+https://www.altaro.com/hyper-v/powershell-integration-services/
+
+VSS SNAPSHOTS / HYPERV SNAPSHOTS
+https://www.altaro.com/hyper-v/hyper-v-snapshots-vs-vss-snapshots/
+
+MOUNTING VHD
+https://docs.microsoft.com/en-us/powershell/module/hyper-v/mount-vhd?view=win10-ps
+
+POWERSHELL SCRIPT EXAMPLES
+https://www.altaro.com/hyper-v/powershell-integration-services/
+
+With PS HyperV Cmdlets
+https://gallery.technet.microsoft.com/scriptcenter/PowerShell-Hyper-V-Backup-7d444752
+
+With Windows Server Backup WSB
+https://gallery.technet.microsoft.com/scriptcenter/Simple-Hyper-V-Backup-for-1c42725d
+
+Backup HyperV trough Integration Services
+https://www.altaro.com/hyper-v/using-powershell-manage-utilize-hyper-v-integration-services-server-2012-r2/
+

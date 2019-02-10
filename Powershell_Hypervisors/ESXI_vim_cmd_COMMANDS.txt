@@ -1,0 +1,41 @@
+vim-cmd vmsvc/getallvms
+vim-cmd vmsvc/power.getstate VMID
+vim-cmd vmsvc/power.shutdown VMID
+vim-cmd vmsvc/power.on VMID
+vim-cmd vmsvc/power.off VMID
+vim-cmd vmsvc/power.reboot VMID
+vim-cmd vmsvc/get.guest VMID
+ vim-cmd vmsvc/get.datastore VMID
+
+vim-cmd vmsvc [FOR MORE COMMANDS]
+
+---------------------------------------------------------------------------------------------
+vim-cmd vmsvc/snapshot.create 27 SNAP001
+
+Usage: snapshot.create vmid [snapshotName] [snapshotDescription] [includeMemory] [quiesced]
+vim-cmd vmsvc/snapshot.create 27 SNAP001 "vim-cmd test snapshot" quiesced
+---------------------------------------------------------------------------------------------
+
+vim-cmd vmsvc/snapshot.get 27
+
+Get Snapshot:
+|-ROOT
+--Snapshot Name        : SNAP001
+--Snapshot Id        : 4
+--Snapshot Desciption  :
+--Snapshot Created On  : 2/10/2019 6:55:11
+--Snapshot State       : powered off
+---------------------------------------------------------------------------------------------
+
+Usage: snapshot.remove vmid snapshotId [removeChildren]
+vim-cmd vmsvc/snapshot.remove 27 4
+---------------------------------------------------------------------------------------------
+
+SNAPSHOT CREATION VIM-CMD
+http://buildvirtual.net/working-with-snapshots-on-the-esxi-cli/
+
+VIM-CMD TASKS COLLECTION
+https://kb.vmware.com/s/article/1013003
+
+CREATE VM VIM-CMD
+https://searchitchannel.techtarget.com/feature/Creation-of-virtual-machines-utilizing-command-line-tools
