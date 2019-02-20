@@ -8,7 +8,7 @@ Drag and drop or right click and pin to task bar the shortcut files for more nat
 + Restart Button<br />
 <br />
 Shutdown and Restart Buttons request for confirmation before executing the command.<br />
-**I'm not responsible for any kind of damage or data loss** you can suffer of the use or missuse of
+__I'm not responsible for any kind of damage or data loss__ you can suffer of the use or missuse of
 it!<br />
 <br />
 For further information you can check the license.
