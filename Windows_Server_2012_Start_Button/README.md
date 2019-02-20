@@ -1,6 +1,6 @@
 # Windows Server 2012 and Windows 8 Start Button
 
-Small collection of vbs scripts, batch scripts and shortcuts that gives the opportunity to have Windows like Start Button where it is missing.<br />
+Small collection of vbs scripts, batch scripts and shortcuts that gives the opportunity to have Windows like Start Button where it is missing.<br /><br />
 Drag and drop or right click and pin to task bar the shortcut files for more natural configuration of the Start button.<br />
 The package includes:<br />
 Start Button<br />
