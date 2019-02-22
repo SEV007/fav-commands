@@ -1,0 +1,6 @@
+### USEFUL SYSTEMD COMMAND LIST ###
+
+chkconfig
+
+systemctl list-unit-files
+systemctl list-dependencies
