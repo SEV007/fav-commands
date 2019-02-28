@@ -1,0 +1,14 @@
+RALUS DETAILED CONFIG
+
+https://www.veritas.com/support/en_US/article.100018291.html
+
+
+CREATE BEOPER GROUP ADMIN GUIDE
+https://www.veritas.com/support/en_US/doc/59226269-99535599-0/v53991917-99535599
+https://www.veritas.com/support/en_US/doc/59226269-99535599-0/v53991927-99535599
+
+usermod -aG group1,group2 username
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/s1-users-tools
+
+TNSNAMES
+https://www.veritas.com/support/en_US/article.100000903.html

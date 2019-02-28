@@ -1,0 +1,2 @@
+###LINUX PORTS COMMUNICATION CHECK###
+https://www.cyberciti.biz/faq/check-network-connection-linux/
