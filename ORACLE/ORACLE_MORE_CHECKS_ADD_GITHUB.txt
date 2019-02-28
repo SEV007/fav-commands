@@ -15,6 +15,24 @@ connect / as sysdba
 //LIST ROLES IN ORACLE DATABAE
 SELECT * FROM DBA_ROLES;
 
+//CREATE ORACLE BACKUP USER //GRANT PERMISSIONS AND ROLES
+To create the account and assign the appropriate roles in Oracle Server Manager or SQLPlus, execute the following commands:
+ 
+1. CREATE USER BACKUP IDENTIFIED BY ORACLE;  
+   (BACKUP is the account name and ORACLE is the password in this example.)
+2. GRANT UNLIMITED TABLESPACE TO BACKUP;
+3. GRANT AQ_ADMINISTRATOR_ROLE TO BACKUP;
+4. GRANT SYSDBA TO BACKUP;
+5. GRANT CONNECT TO BACKUP;
+6. ALTER USER BACKUP DEFAULT ROLE ALL;
+7. ALTER USER BACKUP DEFAULT TABLESPACE SYSTEM;
+To connect to the Oracle "Server Manager" (for the BACKUP account), execute the following command:
+  connect BACKUP/ORACLE   (where BACKUP is the account name and ORACLE is the password as in the above example)
+To verify the roles and privileges associated with this account, execute the following command:
+
+https://www.veritas.com/support/en_US/article.100020849.html
+
+
 //CONNECT WITH BE CREATED USER
 connect BACKUP/PassWD
 
