@@ -76,6 +76,13 @@ Usage:  tnsping <address>
 sample: SID=ora
 tnsping ora [ENTER]
 
+//ORACLE INSTANCE STATUS
+SELECT INSTANCE_NAME, STATUS, DATABASE_STATUS FROM V$INSTANCE;
+
+#RETURN
+INSTANCE_NAME    STATUS       DATABASE_STATUS
+---------------- ------------ -----------------
+YOUR_DBASE       OPEN         ACTIVE
 
 
 //ORACLE SID,INSTANCE_NAME,DB_NAME,GLOBAL_NAME
