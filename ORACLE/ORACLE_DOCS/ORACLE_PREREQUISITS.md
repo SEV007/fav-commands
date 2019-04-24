@@ -57,6 +57,8 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 **ORACLE RED HAT KERNEL LIMITS**
 1. [GLOBAL/USER LIMITS >>> /etc/sysctl.conf | /etc/securitty/limits.conf | /proc/sys/fs/file-max](https://stijn.tintel.eu/blog/2007/05/04/changing-the-maximum-number-of-open-file-descriptors)
 2. [GLOBAL/USER LIMITS >>> RED HAT DOCUMENTATION](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/tuning_and_optimizing_red_hat_enterprise_linux_for_oracle_9i_and_10g_databases/sect-oracle_9i_and_10g_tuning_guide-setting_shell_limits_for_the_oracle_user-limiting_maximum_number_of_processes_available_for_the_oracle_user)
+3. [HARD/SOFT LIMITS TUTORIAL](http://geekswing.com/geek/quickie-tutorial-ulimit-soft-limits-hard-limits-soft-stack-hard-stack/)
+4. [HARD/SOFT LIMITS DETAILED GUIDE | ULIMIT](https://lzone.de/cheat-sheet/ulimit)
 
 ### How to Install Oracle Database 12c on RHEL/CentOS 7
 
