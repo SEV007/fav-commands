@@ -59,10 +59,17 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 2. [GLOBAL/USER LIMITS >>> RED HAT DOCUMENTATION](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/tuning_and_optimizing_red_hat_enterprise_linux_for_oracle_9i_and_10g_databases/sect-oracle_9i_and_10g_tuning_guide-setting_shell_limits_for_the_oracle_user-limiting_maximum_number_of_processes_available_for_the_oracle_user)
 3. [HARD/SOFT LIMITS TUTORIAL](http://geekswing.com/geek/quickie-tutorial-ulimit-soft-limits-hard-limits-soft-stack-hard-stack/)
 4. [HARD/SOFT LIMITS DETAILED GUIDE | ULIMIT](https://lzone.de/cheat-sheet/ulimit)
+5. [Checking Resource Limits for Oracle Software Installation Users](https://docs.oracle.com/en/database/oracle/oracle-database/12.2/ladbi/checking-resource-limits-for-oracle-software-installation-users.html#GUID-293874BD-8069-470F-BEBF-A77C06618D5A)
+6. []()
 
+### ALTERNATIVE ORACLE 12c CONFIGURATION GUIDES
 ### How to Install Oracle Database 12c on RHEL/CentOS 7
 
 https://www.tecmint.com/install-oracle-database-12c-on-centos-7/
+
+### Setting Up Prerequisites for Oracle 12c Installation in RHEL/CentOS/Oracle Linux 6.5 – Part I
+
+https://www.tecmint.com/setting-up-prerequisites-for-oracle-12c-installation/
 
 ### Using Silent Mode or Noninteractive Mode
 
