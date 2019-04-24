@@ -13,7 +13,7 @@ https://docs.oracle.com/en/database/oracle/oracle-database/12.2/ladbi/operating-
 
 https://docs.oracle.com/database/121/LADBI/pre_install.htm#LADBI222
 
-** Completing a Minimal Linux Installation **
+**Completing a Minimal Linux Installation**
 
 https://docs.oracle.com/database/121/LADBI/pre_install.htm#LADBI7487
 
