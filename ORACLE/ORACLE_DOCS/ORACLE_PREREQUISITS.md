@@ -23,13 +23,15 @@ https://docs.oracle.com/database/121/LADBI/pre_install.htm#LADBI222
 ### Completing a Minimal Linux Installation
 
 https://docs.oracle.com/database/121/LADBI/pre_install.htm#LADBI7487
-
+<br />
+<br />
 
 ### 3) /////////////////////////////////////////////////////////
 ### Oracle Database Installation Checklist
 
 https://docs.oracle.com/database/121/LADBI/chklist.htm#LADBI8045
-
+<br />
+<br />
 
 ### 4) /////////////////////////////////////////////////////////
 ### Installing Oracle Database and Creating a Database
