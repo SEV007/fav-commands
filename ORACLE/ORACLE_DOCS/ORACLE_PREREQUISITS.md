@@ -52,8 +52,8 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 2. [NSS/NISS >>> /etc/nsswitch.conf)](https://docs.oracle.com/cd/E52668_01/E54669/html/ol7-s2-netconf.html)
 3. [DNS >>> /etc/resolv.conf](https://docs.oracle.com/cd/E52668_01/E54669/html/ol7-s4-netconf.html)
 4. [NETWORK >>> /etc/sysconfig/network](https://docs.oracle.com/cd/E52668_01/E54669/html/ol7-s5-netconf.html)
-<br />
-0. **ORACLE RED HAT KERNEL LIMITS
+<br/>
+0. **ORACLE RED HAT KERNEL LIMITS**
 1. [GLOBAL/USER LIMITS >>> /etc/sysctl.conf | /etc/securitty/limits.conf | /proc/sys/fs/file-max](https://stijn.tintel.eu/blog/2007/05/04/changing-the-maximum-number-of-open-file-descriptors)
 
 ### How to Install Oracle Database 12c on RHEL/CentOS 7
