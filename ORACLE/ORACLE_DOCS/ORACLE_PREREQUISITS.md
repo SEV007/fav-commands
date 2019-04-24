@@ -31,3 +31,11 @@ https://docs.oracle.com/database/121/LADBI/pre_install.htm#LADBI7487
 
 https://docs.oracle.com/database/121/LADBI/chklist.htm#LADBI8045
 
+## 4) /////////////////////////////////////////////////////////
+### Installing Oracle Database and Creating a Database
+
+https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
+
+### Using Silent Mode or Noninteractive Mode
+
+https://docs.oracle.com/cd/B28359_01/install.111/b32002/app_nonint.htm#LADBI416
