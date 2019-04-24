@@ -41,6 +41,10 @@ https://docs.oracle.com/database/121/LADBI/chklist.htm#LADBI8045
 
 https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 
+### How to Install Oracle Database 12c on RHEL/CentOS 7
+
+https://www.tecmint.com/install-oracle-database-12c-on-centos-7/
+
 ### Using Silent Mode or Noninteractive Mode
 
 https://docs.oracle.com/cd/B28359_01/install.111/b32002/app_nonint.htm#LADBI416
