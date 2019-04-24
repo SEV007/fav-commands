@@ -8,7 +8,7 @@ https://docs.oracle.com/en/database/oracle/oracle-database/18/cwlin/supported-or
 https://docs.oracle.com/en/database/oracle/oracle-database/12.2/ladbi/operating-system-checklist-for-oracle-database-installation-on-linux.html#GUID-E5C0A90E-7750-45D9-A8BC-C7319ED934F0
 
 ---
-## 2) ##
+## 2) /////////////////////////////////////////////////////////
 ## Operating System Requirements for x86-64 Linux Platforms ##
 
 https://docs.oracle.com/database/121/LADBI/pre_install.htm#LADBI7533
@@ -24,7 +24,7 @@ https://docs.oracle.com/database/121/LADBI/pre_install.htm#LADBI222
 https://docs.oracle.com/database/121/LADBI/pre_install.htm#LADBI7487
 
 ---
-## 3) ##
+## 3) /////////////////////////////////////////////////////////
 ## Oracle Database Installation Checklist ##
 
 https://docs.oracle.com/database/121/LADBI/chklist.htm#LADBI8045
