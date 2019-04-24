@@ -1,7 +1,5 @@
 ## 1) /////////////////////////////////////////////////////////
-
->
- ### Supported Oracle Linux 7 Distributions for x86-64**
+### Supported Oracle Linux 7 Distributions for x86-64**
 
 https://docs.oracle.com/en/database/oracle/oracle-database/18/cwlin/supported-oracle-linux-7-distributions-for-x86-64.html#GUID-3E82890D-2552-4924-B458-70FFF02315F7
 
@@ -9,7 +7,7 @@ https://docs.oracle.com/en/database/oracle/oracle-database/18/cwlin/supported-or
 
 https://docs.oracle.com/en/database/oracle/oracle-database/12.2/ladbi/operating-system-checklist-for-oracle-database-installation-on-linux.html#GUID-E5C0A90E-7750-45D9-A8BC-C7319ED934F0
 
-
+<br />
 ## 2) /////////////////////////////////////////////////////////
 ### Operating System Requirements for x86-64 Linux Platforms
 
@@ -25,12 +23,13 @@ https://docs.oracle.com/database/121/LADBI/pre_install.htm#LADBI222
 
 https://docs.oracle.com/database/121/LADBI/pre_install.htm#LADBI7487
 
-
+<br />
 ## 3) /////////////////////////////////////////////////////////
 ### Oracle Database Installation Checklist
 
 https://docs.oracle.com/database/121/LADBI/chklist.htm#LADBI8045
 
+<br />
 ## 4) /////////////////////////////////////////////////////////
 ### Installing Oracle Database and Creating a Database
 
