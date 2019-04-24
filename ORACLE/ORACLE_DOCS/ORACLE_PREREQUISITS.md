@@ -46,6 +46,8 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 > ////////////////////////////////////////////////////////////////////////////<br />
 > https://github.com/SEV007/fav-commands/blob/master/ORACLE/ORACLE_12c_PREINSTALL.txt
 
+* [HOSTS](https://docs.oracle.com/cd/E52668_01/E54669/html/ol7-s2-netconf.html)
+
 ### How to Install Oracle Database 12c on RHEL/CentOS 7
 
 https://www.tecmint.com/install-oracle-database-12c-on-centos-7/
