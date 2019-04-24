@@ -55,7 +55,7 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 
 
 **ORACLE RED HAT KERNEL LIMITS**
-1. [GLOBAL/USER LIMITS >>> /etc/sysctl.conf /etc/securitty/limits.conf /proc/sys/fs/file-max](https://stijn.tintel.eu/blog/2007/05/04/changing-the-maximum-number-of-open-file-descriptors)
+1. [GLOBAL/USER LIMITS >>> /etc/sysctl.conf | /etc/securitty/limits.conf | /proc/sys/fs/file-max](https://stijn.tintel.eu/blog/2007/05/04/changing-the-maximum-number-of-open-file-descriptors)
 
 ### How to Install Oracle Database 12c on RHEL/CentOS 7
 
