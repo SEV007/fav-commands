@@ -71,6 +71,10 @@ https://www.tecmint.com/install-oracle-database-12c-on-centos-7/
 
 https://www.tecmint.com/setting-up-prerequisites-for-oracle-12c-installation/
 
+### Oracle12c Database Installation steps | SAP
+
+https://blogs.sap.com/2015/01/27/oracle12c-database-installation-steps/
+
 ### Using Silent Mode or Noninteractive Mode
 
 https://docs.oracle.com/cd/B28359_01/install.111/b32002/app_nonint.htm#LADBI416
