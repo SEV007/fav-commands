@@ -73,6 +73,7 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 4. [ORACLE DEFAULT USERS LIST](https://docs.oracle.com/cd/B19306_01/install.102/b15660/rev_precon_db.htm#BABJCEDE)
 5. [ORACLE DATABASE STATUS CHECK](https://hnawri.wordpress.com/2007/05/04/how-to-check-your-oracle-database-status-whether-running-properly-or-not/)
 6. [Stopping and Starting Oracle Software ORACLE DOCUMENTATION](https://docs.oracle.com/database/121/UNXAR/strt_stp.htm#UNXAR002)
+7. [Oracle Database 12c on Oracle Linux 7 - autostart, enabling connection as sysdba](https://dba.stackexchange.com/questions/82260/oracle-database-12c-on-oracle-linux-7-autostart-enabling-connection-as-sysdba)
 
 ### ALTERNATIVE ORACLE 12c CONFIGURATION AND INSTALLATION GUIDES GUIDES
 ### How to Install Oracle Database 12c on RHEL/CentOS 7
