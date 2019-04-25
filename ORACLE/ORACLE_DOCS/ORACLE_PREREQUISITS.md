@@ -56,6 +56,7 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 6. [HOSTNAME CLASS | HOSTNAMECTL | NMTUI TOOL | NMCLI TOOL | /etc/hostname](https://www.itzgeek.com/how-tos/linux/centos-how-tos/change-hostname-in-centos-7-rhel-7.html)
 7. [/etc/hosts FORMAT](https://unix.stackexchange.com/questions/13046/format-of-etc-hosts-on-linux-different-from-windows)
 8. [/etc/resolv.conf Debian WIKI](https://wiki.debian.org/resolv.conf)
+9. [/etc/hosts FQDN SETUP](https://kerneltalks.com/howto/how-to-setup-domain-name-in-linux-server/)
 
 **ORACLE RED HAT KERNEL LIMITS**
 1. [GLOBAL/USER LIMITS >>> /etc/sysctl.conf | /etc/securitty/limits.conf | /proc/sys/fs/file-max](https://stijn.tintel.eu/blog/2007/05/04/changing-the-maximum-number-of-open-file-descriptors)
