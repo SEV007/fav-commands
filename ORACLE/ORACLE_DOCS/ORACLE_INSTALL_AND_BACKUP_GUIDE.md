@@ -86,8 +86,8 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 > CHECK ORACLE TNSNAMES | TNSLISTENERS <br/>
 > CHECK ORACLE SID | INSTANCE_NAME | DB_NAME | GLOBAL_NAME <br/>
 > CHECK USER_ROLE_PRIVS | USER_TAB_PRIVS | USER_SYS_PRIVS <br/>
-> TOOLS NETCA | NETMGR | GUI SET LISTENERS | NAMES
-> https://github.com/SEV007/fav-commands/blob/master/ORACLE/ORACLE_MORE_CHECKS_ADD_GITHUB.txt
+> TOOLS NETCA | NETMGR | GUI SET LISTENERS | NAMES <br/>
+> https://github.com/SEV007/fav-commands/blob/master/ORACLE/ORACLE_MORE_CHECKS_ADD_GITHUB.txt <br/>
 > [ADDITIONAL INFORMATION FOR ORACLE USER CREATION AND GRANTS](https://chartio.com/resources/tutorials/how-to-create-a-user-and-grant-permissions-in-oracle/)
 > ////////////////////////////////////////////////////////////////////////////<br />
 
