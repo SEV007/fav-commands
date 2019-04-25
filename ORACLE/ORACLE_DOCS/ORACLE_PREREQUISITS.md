@@ -49,6 +49,7 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 **ADDITIONAL INFORMATION**
 **ORACLE RED HAT Network Configuration Files**
 1. [HOSTS >>> /etc/hosts](https://docs.oracle.com/cd/E52668_01/E54669/html/ol7-s2-netconf.html)
+  1.1 asd
 2. [NSS/NISS >>> /etc/nsswitch.conf)](https://docs.oracle.com/cd/E52668_01/E54669/html/ol7-s2-netconf.html)
 3. [DNS >>> /etc/resolv.conf](https://docs.oracle.com/cd/E52668_01/E54669/html/ol7-s4-netconf.html)
 4. [NETWORK >>> /etc/sysconfig/network](https://docs.oracle.com/cd/E52668_01/E54669/html/ol7-s5-netconf.html)
@@ -60,7 +61,9 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 3. [HARD/SOFT LIMITS TUTORIAL](http://geekswing.com/geek/quickie-tutorial-ulimit-soft-limits-hard-limits-soft-stack-hard-stack/)
 4. [HARD/SOFT LIMITS DETAILED GUIDE | ULIMIT](https://lzone.de/cheat-sheet/ulimit)
 5. [Checking Resource Limits for Oracle Software Installation Users](https://docs.oracle.com/en/database/oracle/oracle-database/12.2/ladbi/checking-resource-limits-for-oracle-software-installation-users.html#GUID-293874BD-8069-470F-BEBF-A77C06618D5A)
-6. []()
+6. [CORE LIMITS >>> /etc/pam.d/su](https://stackoverflow.com/questions/24180048/linux-limits-conf-not-working)
+
+
 
 ### ALTERNATIVE ORACLE 12c CONFIGURATION GUIDES
 ### How to Install Oracle Database 12c on RHEL/CentOS 7
