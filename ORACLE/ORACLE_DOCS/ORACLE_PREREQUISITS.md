@@ -55,6 +55,7 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 5. [CONFIGURING HOST NAMES USING HOSTNAMECTL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/networking_guide/sec_configuring_host_names_using_hostnamectl)
 6. [HOSTNAME CLASS | HOSTNAMECTL | NMTUI TOOL | NMCLI TOOL | /etc/hostname](https://www.itzgeek.com/how-tos/linux/centos-how-tos/change-hostname-in-centos-7-rhel-7.html)
 7. [/etc/hosts FORMAT](https://unix.stackexchange.com/questions/13046/format-of-etc-hosts-on-linux-different-from-windows)
+8. [/etc/resolv.conf Debian WIKI](https://wiki.debian.org/resolv.conf)
 
 **ORACLE RED HAT KERNEL LIMITS**
 1. [GLOBAL/USER LIMITS >>> /etc/sysctl.conf | /etc/securitty/limits.conf | /proc/sys/fs/file-max](https://stijn.tintel.eu/blog/2007/05/04/changing-the-maximum-number-of-open-file-descriptors)
