@@ -87,7 +87,7 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 > TOOLS NETCA | NETMGR | GUI SET LISTENERS | NAMES
 > https://github.com/SEV007/fav-commands/blob/master/ORACLE/ORACLE_MORE_CHECKS_ADD_GITHUB.txt
 > ////////////////////////////////////////////////////////////////////////////<br />
-<br />
+
 ### ADDITIONAL CHECKS FOR USER LOCKING
 > ////////////////////////////////////////////////////////////////////////////<br />
 > QUERY dba_users | username | account_status | lock_date <br />
