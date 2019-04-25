@@ -78,7 +78,7 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 <br />
 
 ### 5) /////////////////////////////////////////////////////////
-### ORACLE RALUS CONFIGURATION AND BACKUP USER GRANT PERMISSIONS
+### ORACLE RALUS USER CONFIGURATION AND USER GRANT PERMISSIONS
 > ////////////////////////////////////////////////////////////////////////////<br />
 > CREATE BACKUP USER | GRANT PERMISSION | UNLOCK DB ACCOUNTS <br/>
 > CHECK ORACLE TNSNAMES | TNSLISTENERS <br/>
@@ -96,6 +96,13 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 > https://github.com/SEV007/fav-commands/blob/master/ORACLE/oracle_privs.txt
 > ////////////////////////////////////////////////////////////////////////////<br />
 <br />
+
+### RALUS DETAILED CONFIGURATION | POST GRANT PERMISSIONS
+1. [About the Backup Exec operators (beoper) group for the Remote Media Agent for Linux](https://www.veritas.com/support/en_US/doc/59226269-99535599-0/v53991917-99535599)
+2. [Creating the Backup Exec operators (beoper) group manually for the Remote Media Agent for Linux](https://www.veritas.com/support/en_US/doc/59226269-99535599-0/v53991927-99535599)
+3. [ADD RALUS BACKUP user to beoper](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/s1-users-tools)
+4. [SET TNSNAMES | CHECK /etc/oratab | SET REMOTE_LOGIN_PASSWORDFILE=EXCLUSIVE](https://www.veritas.com/support/en_US/article.100000903.html)
+5. [More steps and details about RALUS Configuration](https://www.veritas.com/support/en_US/article.100018291.html)
 
 ### ALTERNATIVE ORACLE 12c CONFIGURATION AND INSTALLATION GUIDES GUIDES
 ### How to Install Oracle Database 12c on RHEL/CentOS 7
