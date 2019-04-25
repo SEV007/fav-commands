@@ -1,0 +1,11 @@
+Configuring the init.ora file
+https://www.ibm.com/support/knowledgecenter/SSRMWJ_7.0.1.11/com.ibm.isim.doc/installing/tsk/tsk_ic_ins_db_ora_initora.htm
+
+Tasks for creating the database
+https://www.ibm.com/support/knowledgecenter/SSRMWJ_7.0.1.11/com.ibm.isim.doc/installing/cpt/cpt_ic_ins_db_ora_creatdb.htm
+
+Installation of the Oracle database server
+https://www.ibm.com/support/knowledgecenter/SSRMWJ_7.0.1.11/com.ibm.isim.doc/installing/cpt/cpt_ic_ins_db_ora_install.htm
+
+Environment variable settings for the Oracle database
+https://www.ibm.com/support/knowledgecenter/SSRMWJ_7.0.1.11/com.ibm.isim.doc/installing/cpt/cpt_ic_ins_db_ora_setvars.htm
