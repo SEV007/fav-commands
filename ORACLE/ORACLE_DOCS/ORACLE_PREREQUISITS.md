@@ -66,7 +66,9 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 5. [Checking Resource Limits for Oracle Software Installation Users](https://docs.oracle.com/en/database/oracle/oracle-database/12.2/ladbi/checking-resource-limits-for-oracle-software-installation-users.html#GUID-293874BD-8069-470F-BEBF-A77C06618D5A)
 6. [CORE LIMITS >>> /etc/pam.d/su](https://stackoverflow.com/questions/24180048/linux-limits-conf-not-working)
 
-
+**ORACLE POST INSTALLATION CONFIGURATION | TNSLISTENERS | TNSNAMES**
+1. [SET ORACLE ENVIRONMENT VARIABLES LINUX](https://www.ibm.com/support/knowledgecenter/en/SSFUEU_7.3.0/com.ibm.swg.ba.cognos.op_installation_guide.7.3.0.doc/t_camphor_setting_environment_variables_ora.html)
+2. [SET ORACLE_HOME_LISTNER VARIABLE](http://logic.edchen.org/how-to-resolve-oracle_home_listner-is-not-set-unable-to-auto-start-oracle-net-listener/)
 
 ### ALTERNATIVE ORACLE 12c CONFIGURATION GUIDES
 ### How to Install Oracle Database 12c on RHEL/CentOS 7
