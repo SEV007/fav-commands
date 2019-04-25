@@ -114,6 +114,11 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 > https://github.com/SEV007/fav-commands/blob/master/ORACLE/ORACLE_CONFIG_FILES.txt
 > /////////////////////////////////////////////////////////////////////////<br />
 
+### 6) LINUX NETWORK PORT CHECKS TOOLS AND COMMANDS
+
+https://www.cyberciti.biz/faq/check-network-connection-linux/
+<br />
+
 ### ALTERNATIVE ORACLE 12c CONFIGURATION AND INSTALLATION GUIDES GUIDES
 ### How to Install Oracle Database 12c on RHEL/CentOS 7
 
