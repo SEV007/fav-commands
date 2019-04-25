@@ -75,6 +75,9 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 6. [Stopping and Starting Oracle Software ORACLE DOCUMENTATION](https://docs.oracle.com/database/121/UNXAR/strt_stp.htm#UNXAR002)
 7. [Oracle Database 12c on Oracle Linux 7 - autostart, enabling connection as sysdba](https://dba.stackexchange.com/questions/82260/oracle-database-12c-on-oracle-linux-7-autostart-enabling-connection-as-sysdba)
 8. [Checking Compatibility Before Upgrading Oracle Database](https://docs.oracle.com/en/database/oracle/oracle-database/18/spmsu/checking-the-compatibility-level-of-oracle-database.html#GUID-5715C0EC-0229-4AE0-8433-DFE4A4297C4A)
+<br />
+<br />
+<br />
 
 ### 5) /////////////////////////////////////////////////////////
 ### ORACLE RALUS CONFIGURATION AND BACKUP USER GRANT PERMISSIONS
@@ -85,6 +88,9 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 > CHECK USER_ROLE_PRIVS | USER_TAB_PRIVS | USER_SYS_PRIVS <br/>
 > https://github.com/SEV007/fav-commands/blob/master/ORACLE/ORACLE_MORE_CHECKS_ADD_GITHUB.txt
 > ////////////////////////////////////////////////////////////////////////////<br />
+<br />
+<br />
+<br />
 
 ### ALTERNATIVE ORACLE 12c CONFIGURATION AND INSTALLATION GUIDES GUIDES
 ### How to Install Oracle Database 12c on RHEL/CentOS 7
