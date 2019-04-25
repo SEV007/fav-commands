@@ -104,6 +104,17 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 5. [More steps and details about RALUS Configuration](https://www.veritas.com/support/en_US/article.100018291.html)
 <br />
 
+### CONFIG FILES AFTER SUCCESSFUL CONFIGURATION
+> /////////////////////////////////////////////////////////////////////////<br />
+> CHECK OUTPUT FOR 1. Configure database access <br />
+> CHECK OUTPUT FOR 2. Configure Oracle instance information <br />
+> CHECK /etc/hosts CONTENT <br />
+> CHECK /u01/app/oracle/product/12.2.0/dbhome_1/network/admin/listener.ora CONTENT <br />
+> CHECK /u01/app/oracle/product/12.2.0/dbhome_1/network/admin/tnsnames.ora CONTENT <br />
+> CHECK /u01/app/oracle/product/12.2.0/dbhome_1/network/admin/sqlnet.ora CONTENT <br />
+> https://github.com/SEV007/fav-commands/blob/master/ORACLE/ORACLE_CONFIG_FILES.txt
+> /////////////////////////////////////////////////////////////////////////<br />
+
 ### ALTERNATIVE ORACLE 12c CONFIGURATION AND INSTALLATION GUIDES GUIDES
 ### How to Install Oracle Database 12c on RHEL/CentOS 7
 
