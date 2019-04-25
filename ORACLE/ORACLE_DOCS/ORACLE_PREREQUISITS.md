@@ -49,11 +49,10 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 **ADDITIONAL INFORMATION**
 **ORACLE RED HAT Network Configuration Files**
 1. [HOSTS >>> /etc/hosts](https://docs.oracle.com/cd/E52668_01/E54669/html/ol7-s2-netconf.html)
-1.1 asd
 2. [NSS/NISS >>> /etc/nsswitch.conf)](https://docs.oracle.com/cd/E52668_01/E54669/html/ol7-s2-netconf.html)
 3. [DNS >>> /etc/resolv.conf](https://docs.oracle.com/cd/E52668_01/E54669/html/ol7-s4-netconf.html)
 4. [NETWORK >>> /etc/sysconfig/network](https://docs.oracle.com/cd/E52668_01/E54669/html/ol7-s5-netconf.html)
-
+5. [CONFIGURING HOST NAMES USING HOSTNAMECTL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/networking_guide/sec_configuring_host_names_using_hostnamectl)
 
 **ORACLE RED HAT KERNEL LIMITS**
 1. [GLOBAL/USER LIMITS >>> /etc/sysctl.conf | /etc/securitty/limits.conf | /proc/sys/fs/file-max](https://stijn.tintel.eu/blog/2007/05/04/changing-the-maximum-number-of-open-file-descriptors)
