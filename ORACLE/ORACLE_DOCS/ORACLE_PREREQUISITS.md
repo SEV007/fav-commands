@@ -53,7 +53,8 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 3. [DNS >>> /etc/resolv.conf](https://docs.oracle.com/cd/E52668_01/E54669/html/ol7-s4-netconf.html)
 4. [NETWORK >>> /etc/sysconfig/network](https://docs.oracle.com/cd/E52668_01/E54669/html/ol7-s5-netconf.html)
 5. [CONFIGURING HOST NAMES USING HOSTNAMECTL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/networking_guide/sec_configuring_host_names_using_hostnamectl)
-6. [HOSTNAME CLASS | HOSTNAMECTK | NMTUI TOOL | NMCLI TOOL | /etc/hostname](https://www.itzgeek.com/how-tos/linux/centos-how-tos/change-hostname-in-centos-7-rhel-7.html)
+6. [HOSTNAME CLASS | HOSTNAMECTL | NMTUI TOOL | NMCLI TOOL | /etc/hostname](https://www.itzgeek.com/how-tos/linux/centos-how-tos/change-hostname-in-centos-7-rhel-7.html)
+7. [/etc/hosts FORMAT](https://unix.stackexchange.com/questions/13046/format-of-etc-hosts-on-linux-different-from-windows)
 
 **ORACLE RED HAT KERNEL LIMITS**
 1. [GLOBAL/USER LIMITS >>> /etc/sysctl.conf | /etc/securitty/limits.conf | /proc/sys/fs/file-max](https://stijn.tintel.eu/blog/2007/05/04/changing-the-maximum-number-of-open-file-descriptors)
