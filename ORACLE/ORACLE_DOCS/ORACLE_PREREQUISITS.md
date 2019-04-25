@@ -115,7 +115,7 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 > /////////////////////////////////////////////////////////////////////////<br />
 <br />
 
-### 6) LINUX NETWORK PORT CHECKS TOOLS AND COMMANDS
+### 6) LINUX NETWORK PORTS CHECKS TOOLS AND COMMANDS
 
 https://www.cyberciti.biz/faq/check-network-connection-linux/
 <br />
@@ -133,6 +133,10 @@ https://www.tecmint.com/setting-up-prerequisites-for-oracle-12c-installation/
 ### Oracle12c Database Installation steps | SAP
 
 https://blogs.sap.com/2015/01/27/oracle12c-database-installation-steps/
+
+### Create Database in Existing Instance | DBCA tool
+
+https://www.youtube.com/watch?v=Npy84dVIc70
 
 ### Using Silent Mode or Noninteractive Mode
 
