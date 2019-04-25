@@ -95,7 +95,7 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 > EXPORT TNS_ADMIN <br />
 > https://github.com/SEV007/fav-commands/blob/master/ORACLE/oracle_privs.txt
 > ////////////////////////////////////////////////////////////////////////////<br />
-<br />
+
 ### RALUS DETAILED CONFIGURATION | POST GRANT PERMISSIONS
 1. [About the Backup Exec operators (beoper) group for the Remote Media Agent for Linux](https://www.veritas.com/support/en_US/doc/59226269-99535599-0/v53991917-99535599)
 2. [Creating the Backup Exec operators (beoper) group manually for the Remote Media Agent for Linux](https://www.veritas.com/support/en_US/doc/59226269-99535599-0/v53991927-99535599)
