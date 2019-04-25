@@ -66,6 +66,7 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 4. [HARD/SOFT LIMITS DETAILED GUIDE | ULIMIT](https://lzone.de/cheat-sheet/ulimit)
 5. [Checking Resource Limits for Oracle Software Installation Users](https://docs.oracle.com/en/database/oracle/oracle-database/12.2/ladbi/checking-resource-limits-for-oracle-software-installation-users.html#GUID-293874BD-8069-470F-BEBF-A77C06618D5A)
 6. [CORE LIMITS >>> /etc/pam.d/su](https://stackoverflow.com/questions/24180048/linux-limits-conf-not-working)
+7. [ADDING SWAP SPACE | EXTEND LVM SWAPP IF NOT MEETING ORACLE REQUIREMENTS](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/deployment_guide/s1-swap-adding)
 
 **ORACLE POST INSTALLATION CONFIGURATION | TNSLISTENERS | TNSNAMES**
 1. [SET ORACLE ENVIRONMENT VARIABLES LINUX](https://www.ibm.com/support/knowledgecenter/en/SSFUEU_7.3.0/com.ibm.swg.ba.cognos.op_installation_guide.7.3.0.doc/t_camphor_setting_environment_variables_ora.html)
@@ -87,6 +88,7 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 > CHECK USER_ROLE_PRIVS | USER_TAB_PRIVS | USER_SYS_PRIVS <br/>
 > TOOLS NETCA | NETMGR | GUI SET LISTENERS | NAMES
 > https://github.com/SEV007/fav-commands/blob/master/ORACLE/ORACLE_MORE_CHECKS_ADD_GITHUB.txt
+> [ADDITIONAL INFORMATION FOR ORACLE USER CREATION AND GRANTS](https://chartio.com/resources/tutorials/how-to-create-a-user-and-grant-permissions-in-oracle/)
 > ////////////////////////////////////////////////////////////////////////////<br />
 
 ### ADDITIONAL CHECKS FOR USER LOCKING
