@@ -77,9 +77,9 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 8. [Checking Compatibility Before Upgrading Oracle Database](https://docs.oracle.com/en/database/oracle/oracle-database/18/spmsu/checking-the-compatibility-level-of-oracle-database.html#GUID-5715C0EC-0229-4AE0-8433-DFE4A4297C4A)
 
 ### 5) /////////////////////////////////////////////////////////
-### ORACLE RALUS CONFIGURATION AND BACKUP USER GRANT PERMISSIONS**
+### ORACLE RALUS CONFIGURATION AND BACKUP USER GRANT PERMISSIONS
 > ////////////////////////////////////////////////////////////////////////////<br />
-> CREATE BACKUP USER | GRANT PERMISSION | UNLOCK DB ACCOUNTS | CHECK TNS NAMES | TNSLISTENERS | ORACLE SID,INSTANCE_NAME,DB_NAME,GLOBAL_NAME
+> CREATE BACKUP USER | GRANT PERMISSION | UNLOCK DB ACCOUNTS | CHECK TNS NAMES | TNSLISTENERS | ORACLE SID,INSTANCE_NAME,DB_NAME,GLOBAL_NAME <br/>
 > https://github.com/SEV007/fav-commands/blob/master/ORACLE/ORACLE_MORE_CHECKS_ADD_GITHUB.txt
 > ////////////////////////////////////////////////////////////////////////////<br />
 
