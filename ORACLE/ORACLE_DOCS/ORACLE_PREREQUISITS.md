@@ -69,8 +69,10 @@ https://docs.oracle.com/cd/E11882_01/server.112/e10897/install.htm#ADMQS002
 **ORACLE POST INSTALLATION CONFIGURATION | TNSLISTENERS | TNSNAMES**
 1. [SET ORACLE ENVIRONMENT VARIABLES LINUX](https://www.ibm.com/support/knowledgecenter/en/SSFUEU_7.3.0/com.ibm.swg.ba.cognos.op_installation_guide.7.3.0.doc/t_camphor_setting_environment_variables_ora.html)
 2. [SET ORACLE_HOME_LISTNER VARIABLE](http://logic.edchen.org/how-to-resolve-oracle_home_listner-is-not-set-unable-to-auto-start-oracle-net-listener/)
+3. [LIST ORACLE DATABASE | INSTANCE | USERS](https://www.codeproject.com/Questions/356587/How-to-list-all-database-names-in-Oracle)
+4. []()
 
-### ALTERNATIVE ORACLE 12c CONFIGURATION GUIDES
+### ALTERNATIVE ORACLE 12c CONFIGURATION AND INSTALLATION GUIDES GUIDES
 ### How to Install Oracle Database 12c on RHEL/CentOS 7
 
 https://www.tecmint.com/install-oracle-database-12c-on-centos-7/
