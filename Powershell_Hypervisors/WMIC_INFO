@@ -1,2 +1,6 @@
 wmic tapedrive get
+wmic tapedrive get LastErrorCode
+wmic tapedrive get status
+
 wmic tapedrive list
+wmic tapedrive list status
