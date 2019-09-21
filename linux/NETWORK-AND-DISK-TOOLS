@@ -1,0 +1,3 @@
+nmtui - config network interfaces
+nmcli - print information about the networks and devices
+shred - wipe disk
