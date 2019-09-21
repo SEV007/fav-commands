@@ -1,3 +1,12 @@
 nmtui - config network interfaces
 nmcli - print information about the networks and devices
+
+# nmcli device wifi rescan
+# nmcli device wifi list
+# nmcli device wifi connect SSID-Name password wireless-password
+
+if you don’t wan’t your password to be stored in the command line history use the –ask parameter like so:
+# nmcli –ask device wifi connect SSID-Name password wireless-password
+
+
 shred - wipe disk
