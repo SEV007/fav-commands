@@ -8,5 +8,9 @@ nmcli - print information about the networks and devices
 if you don’t wan’t your password to be stored in the command line history use the –ask parameter like so:
 # nmcli –ask device wifi connect SSID-Name password wireless-password
 
+iw manipulate wire less devices and their configuration
+# iwlist wlp3s0 scanning
+
+
 
 shred - wipe disk
