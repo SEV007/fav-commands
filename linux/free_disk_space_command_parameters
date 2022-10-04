@@ -1,0 +1,7 @@
+#shows free disk space human readable
+df -Th
+
+#shows free disk space only for ext4 partitions
+df -Th -t ext4
+
+df -Th | grep "ext"
