@@ -1,0 +1,40 @@
+### QEMU migration
+https://it-overload.com/2021/01/08/migrate-from-virtualbox-to-qemu-kvm-on-ubuntu-20-10-as-host-and-get-the-vms-up-and-running-qemu-kvm-libvirt-virtualbox-linux-virtualbox-ubuntu/
+
+https://help.ubuntu.com/community/KVM/Installation
+
+Install KVM
+Convert your disk to kvm
+Create a new machine
+Start the VM
+
+
+sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager
+
+vboxmanage clonemedium --format RAW ./Disk.vdi ./Disk.img
+
+chown roger:roger Disk.img
+
+qemu-img convert -f raw Disk.img -O qcow2 Disk.qcow2
+
+Then start virt-manager to create machine point the converted disk.
+
+---
+##Install virtio tools
+systemctl status qemu-guest-agent
+apt install qemu-guest-agent
+systemctl start qemu-guest-agent
+systemctl enable qemu-guest-agent
+https://docs.openshift.com/container-platform/4.2/cnv/cnv_users_guide/cnv-installing-qemu-guest-agent.html
+https://www.linux-kvm.org/page/WindowsGuestDrivers/Download_Drivers
+---
+
+
+---
+QEMU migration tools src dst
+https://www.linux-kvm.org/page/Migration
+
+Management tools
+https://www.linux-kvm.org/page/Management_Tools
+---
+
