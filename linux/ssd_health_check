@@ -1,0 +1,19 @@
+https://www.techrepublic.com/article/how-to-check-ssd-health-in-linux/
+apt install smartmontools
+
+smartctl -i /dev/sda
+smartctl -t short -a /dev/sda
+smartctl -t long -a /dev/sda
+smartctk -A /dev/sda
+
+
+#short 2min
+#long 20-60min
+#test frequency: weekly
+
+#check
+Power_On_Hours
+Percent_Lifetime_Remain
+
+#show results
+smartctl -A /dev/sda
