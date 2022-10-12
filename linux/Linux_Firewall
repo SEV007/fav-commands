@@ -1,0 +1,42 @@
+CentOS / RHEL 7 : How to open the Firewall port for Samba server using FirewallD
+
+
+Question : I cannot reach my Samba server after starting the service. How do I open the port to be able to connect to my Samba server?
+Solution :
+
+If running FirewallD, it is mandatory to open the ports used by the Samba server in order for it to properly accept clients. To begin with check the firewalld status using the systemctl command :
+
+# systemctl status firewalld
+● firewalld.service - firewalld - dynamic firewall daemon
+   Loaded: loaded (/usr/lib/systemd/system/firewalld.service; enabled; vendor preset: enabled)
+   Active: active (running) since Sat 2016-10-29 21:47:04 IST; 1 weeks 4 days ago
+ Main PID: 1055 (firewalld)
+   CGroup: /system.slice/firewalld.service
+           └─1055 /usr/bin/python -Es /usr/sbin/firewalld --nofork --nopid
+
+Oct 29 21:46:50 localhost.localdomain systemd[1]: Starting firewalld - dynamic firewall daemon...
+Oct 29 21:47:04 localhost.localdomain systemd[1]: Started firewalld - dynamic firewall daemon.
+
+
+As seen in the output above the firewall service is active and running. So we are good to go further.
+
+Check the list of open ports and services using the commands below :
+
+
+# firewall-cmd --list-ports
+# firewall-cmd --list-services
+
+Once you have confirmed that the samba ports are not open on the system, open the Samba port using the following FirewallD command:
+
+# firewall-cmd --add-service=samba
+
+The above command will change the runtime, opening the port temporarily. Make the changes permanent using the following command (this will persist through reboot):
+
+# firewall-cmd --add-service=samba --permanent
+
+
+Verify
+To verify if the samba service is added to the firewalld use :
+
+# firewall-cmd --list-services
+dhcpv6-client samba ssh
