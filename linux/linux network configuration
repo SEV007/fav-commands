@@ -1,0 +1,79 @@
+How to Assign an IP address in RedHat
+January 12, 2005 Posted by Ravi
+Computers may be assigned a static IP address or assigned one dynamically (via DHCP). Here I will explain the steps needed to assign an IP address to your NIC.
+
+Choose one of the following methods:
+
+Using ifconfig command line tool
+
+# ifconfig eth0 192.168.1.3 netmask 255.255.255.0 broadcast 192.168.1.255
+
+In the above command, 192.168.1.3 is your machine's IP address, 255.255.255.0 is the netmask and 192.168.1.255 is your broadcast address.
+The ifconfig command does not store these changes permanently. Upon reboot this information is lost. To make your changes permanent, manually add the commands to the end of the file /etc/rc.d/rc.local to execute them each time during boot up.
+
+##Using GUI tool - neat
+
+You can use the GUI tool /usr/bin/neat - Gnome GUI network administration tool. It handles all interfaces and configures for both static assignment as well as dynamic assignment using DHCP.
+
+##Using netconfig console tool
+
+You can open a terminal and run the command line tool /usr/sbin/netconfig to configure your machine's IP address in RedHat. The caveat is that it only seems to work for the first network interface aka eth0.
+
+The command netconfig and /usr/bin/neat make permanent changes to system network configuration files located in /etc/sysconfig/network-scripts/, so that this information is retained.
+
+The RedHat configuration tools store the configuration information in the file /etc/sysconfig/network. They will also allow one to configure routing information.
+
+##Static IP address configuration
+
+To assign a static IP address to your machine running RedHat, edit the file /etc/sysconfig/network with the following details.
+
+NETWORKING=yes
+HOSTNAME=my-hostname
+FORWARD_IPV4=true    
+GATEWAY="XXX.XXX.XXX.YYY" 
+
+Where my-hostname is the hostname of your machine. FORWARD_IPV4 value is true for NAT, firewall, gateways and linux routers. False for everyone else like desktops and servers. GATEWAY option is used if your network is connected to another network or the internet.
+
+
+##Assigning an IP address via DHCP
+
+For configuring your machine to be assigned an IP address via DHCP, edit the /etc/sysconfig/network file with the following details.
+
+NETWORKING=yes
+HOSTNAME=my-hostname
+
+Gateway is assigned by DHCP. So unlike for static IP configuration, you do not have to assign it here specifically.
+
+
+##Setting IP address using file ifcfg-eth0
+
+Open the file /etc/sysconfig/network-scripts/ifcfg-eth0 and enter the following information.
+
+Static IP configuration
+
+DEVICE=eth0
+BOOTPROTO=static
+BROADCAST=XXX.XXX.XXX.255
+IPADDR=XXX.XXX.XXX.XXX
+NETMASK=255.255.255.0
+NETWORK=XXX.XXX.XXX.0
+ONBOOT=yes
+
+DHCP configuration
+
+DEVICE=eth0
+ONBOOT=yes
+BOOTPROTO=dhcp
+
+Once you have made changes to the files above, you can make the network card use the new values without any reboot by running the following command.
+
+# ifup eth0
+
+ifup is a script residing in /etc/sysconfig/network-scripts/ folder. And it is used to bring network interfaces on-line.
+
+To disable DHCP, change BOOTPROTO=dhcp to BOOTPROTO=none in the ifcfg-eth0 file above.
+
+
+In order for updated information in any of these files to take effect, one must issue the command:
+
+# service network restart
