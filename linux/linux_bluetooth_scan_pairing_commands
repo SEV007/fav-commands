@@ -1,0 +1,303 @@
+This article describes the configuration and usage of Bluetooth controllers and devices.
+
+https://wiki.gentoo.org/wiki/Bluetooth
+
+CHECK BLUETOOTH IN KERNEL RING BUFFER FOR DEVICE DETAILS
+dmesg | grep -i bluetooth
+// var/log/dmesg stores the content of the 'kernel ring buffer', a memory buffer created by the kernel at boot in which to store log data it generates as soon as you get past the bootloader phase.
+https://unix.stackexchange.com/questions/198178/what-are-the-concepts-of-kernel-ring-buffer-user-level-log-level
+
+
+1) SERVICE SETUP
+systemctl start bluetooth
+systemctl enable bluetooth
+
+
+2) CONTROLLER SETUP [BRING UP THE CONTROLLER]
+hciconfig -a
+
+#output
+hci0:   Type: BR/EDR  Bus: USB
+        BD Address: 00:XX:74:XX:A5:36  ACL MTU: 1021:8  SCO MTU: 64:1
+        UP RUNNING PSCAN 
+        RX bytes:1166 acl:0 sco:0 events:43 errors:0
+        TX bytes:960 acl:0 sco:0 commands:43 errors:0
+        Features: 0xbf 0xfe 0xcf 0xfe 0xdb 0xff 0x7b 0x87
+        Packet type: DM1 DM3 DM5 DH1 DH3 DH5 HV1 HV2 HV3 
+        Link policy: RSWITCH SNIFF 
+        Link mode: SLAVE ACCEPT 
+        Name: 'BlueZ 5.21'
+        Class: 0x000104
+        Service Classes: Unspecified
+        Device Class: Computer, Desktop workstation
+        HCI Version: 4.0 (0x6)  Revision: 0x1000
+        LMP Version: 4.0 (0x6)  Subversion: 0x220e
+        Manufacturer: Broadcom Corporation (15)
+
+
+| HCI version | Bluetooth version |
+|-------------|-------------------|
+| 0 (0x0)     | 1.0b              |
+| 1 (0x1)     | 1.1               |
+| 2 (0x2)     | 1.2               |
+| 3 (0x3)     | 2.0               |
+| 4 (0x4)     | 2.1               |
+| 5 (0x5)     | 3.0               |
+| 6 (0x6)     | 4.0               |
+| 7 (0x7)     | 4.1               |
+| 8 (0x8)     | 4.2               |
+| 9 (0x9)     | 5.0               |
+| 10 (0xa)    | 5.1               |
+
+//CHECK BLUETOOTH VERSION
+https://askubuntu.com/questions/591803/how-to-check-bluetooth-version-on-my-laptop
+
+
+
+hciconfig hci0 up
+
+
+3) CONTROLLER SETUP [CHECK IF BLUETOOTH IS BLOCKED]
+
+rfkill list bluetooth
+
+#output
+0: hci0: Bluetooth
+        Soft blocked: no
+        Hard blocked: no
+
+
+rfkill unblock bluetooth
+
+4) CONTROLLER SETUP [CHECK IF BLUETOOTH IS ENABLED]
+cat /proc/acpi/ibm/bluetooth
+
+ENABLE BLUETOOTH IF NOT
+echo 'enable' | sudo tee /proc/acpi/ibm/bluetooth
+
+
+[AutoEnable]
+/etc/bluetooth/main.conf
+
+#insert
+[Policy]
+AutoEnable=true
+
+
+
+5) PAIRING WITH BLUETOOTH DEVICE [START DEVICE AND AGENT]
+
+bluetoothctl
+list
+show (OR show controller_mac_address)
+select (OR select controller_mac_address)
+power on
+agent on
+default-agent
+//Set the controller as discoverable (temporarily for 3 minutes) and pairable:
+discoverable on
+pairable on
+
+
+6) PAIRING WITH BLUETOOTH DEVICE [SCAN FOR VISIBLE DEVICES]
+scan on
+devices
+#Example Output
+Device 7F:07:61:XX:XX:XX 7F-07-61-XX-XX-XX
+Device 77:14:4D:XX:XX:XX 77-14-4D-XX-XX-XX
+Device 69:FB:5D:XX:XX:XX 69-FB-5D-XX-XX-XX
+Device 00:16:09:7D:B5:3E WH-CH500
+
+pair device_mac_address
+//Enter the PIN if prompted:
+PIN code: ####
+
+//Allow the service authorization if requested:
+Authorize service service_uuid (yes/no): yes
+
+
+7) PAIRING WITH BLUETOOTH DEVICE [ESTABLISH TRUST WITH THE PAIRED DEVICE]
+trust device_mac_address
+connect device_mac_address
+info device_mac_address
+#Example Output
+Device 00:16:09:7D:B5:3E (public)
+	Name: WH-CH500
+	Alias: WH-CH500
+	Class: 0x00240404
+	Icon: audio-card
+	Paired: yes
+	Trusted: yes
+	Blocked: no
+	Connected: yes
+	LegacyPairing: no
+	UUID: Headset                   (00XXXXX8-0000-1000-8000-00XXXXXXXXXX)
+	UUID: Audio Sink                (00YYYYYb-0000-9000-8000-00XXXXXXXXXX)
+	UUID: A/V Remote Control Target (00ZZZZZc-0000-3000-7000-00XXXXXXXXXX)
+	UUID: A/V Remote Control        (00XXXXXe-0000-1000-4000-00XXXXXXXXXX)
+	UUID: Handsfree                 (00YYYYYe-0000-1000-8000-00XXXXXXXXXX)
+	UUID: PnP Information           (00ZZZZZ0-0000-5000-2000-00XXXXXXXXXX)
+	Modalias: bluetooth:v0094p9C43d1XYZ
+
+
+[Modalias Info]
+https://wiki.archlinux.org/index.php/Modalias
+
+[Bluetooth UUID Info]
+https://stackoverflow.com/questions/12911369/how-to-get-uuid-of-headphoneearphone-in-android
+
+
+
+8) BLUETOOTH DEVICE EXTRA INFO #######################################################################
+
+hcitool info device_mac_address
+
+#Example Output
+Requesting information ...
+	BD Address:  00:FF:CC:BB:EE:AA
+	OUI Company: CRESYN (00-18-09)
+	Device Name: WH-CH500
+	LMP Version: 4.2 (0x8) LMP Subversion: 0x3232
+	Manufacturer: Airoha Technology Corp. (148)
+	Features page 0: 0xff 0xfe 0x8d 0xfe 0x98 0xbf 0x79 0x83
+		<3-slot packets> <5-slot packets> <encryption> <slot offset> 
+		<timing accuracy> <role switch> <hold mode> <sniff mode> 
+		<RSSI> <channel quality> <SCO link> <HV2 packets> 
+		<HV3 packets> <u-law log> <A-law log> <CVSD> <power control> 
+		<transparent SCO> <broadcast encrypt> <EDR ACL 2 Mbps> 
+		<EDR ACL 3 Mbps> <enhanced iscan> <interlaced iscan> 
+		<interlaced pscan> <inquiry with RSSI> <extended SCO> 
+		<AFH cap. slave> <AFH class. slave> <3-slot EDR ACL> 
+		<5-slot EDR ACL> <sniff subrating> <pause encryption> 
+		<AFH cap. master> <AFH class. master> <EDR eSCO 2 Mbps> 
+		<3-slot EDR eSCO> <extended inquiry> <simple pairing> 
+		<encapsulated PDU> <err. data report> <non-flush flag> <LSTO> 
+		<inquiry TX power> <extended features> 
+	Features page 1: 0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00
+
+
+hcitool name 00:FF:CC:BB:EE:AA
+//Display Device Name #Example Output: WH-CH500
+
+
+sdptool browser 00:FF:CC:BB:EE:AA
+//Display Device Provided Services
+Browsing 00:FF:CC:BB:EE:AA ...
+Service Name: Hands-Free unit
+Service RecHandle: 0x10002
+Service Class ID List:
+  "Handsfree" (0x111e)
+  "Generic Audio" (0x1203)
+Protocol Descriptor List:
+  "L2CAP" (0x0100)
+  "RFCOMM" (0x0003)
+    Channel: 2
+Language Base Attr List:
+  code_ISO639: 0x656e
+  encoding:    0x6a
+  base_offset: 0x100
+Profile Descriptor List:
+  "Handsfree" (0x111e)
+    Version: 0x0107
+
+Service Name: Headset-HS
+Service RecHandle: 0x10001
+Service Class ID List:
+  "Headset" (0x1108)
+  "Generic Audio" (0x1203)
+  "" (0x1131)
+Protocol Descriptor List:
+  "L2CAP" (0x0100)
+  "RFCOMM" (0x0003)
+    Channel: 1
+Language Base Attr List:
+  code_ISO639: 0x656e
+  encoding:    0x6a
+  base_offset: 0x100
+Profile Descriptor List:
+  "Headset" (0x1108)
+    Version: 0x0102
+
+
+sdptool browser 00:FF:CC:BB:EE:AA | grep 'Service Name:'
+//Shows only provided services names
+
+sdptool records 00:FF:CC:BB:EE:AA
+//Provides more detailed information than sdptool browser 00:FF:CC:BB:EE:AA about the present services and protocols
+
+
+l2ping 00:FF:CC:BB:EE:AA
+//Test communication with remote Device
+Ping: 00:FF:CC:BB:EE:AA from 00:XX:74:XX:A5:36 (data size 44) ...
+44 bytes from 00:FF:CC:BB:EE:AA id 0 time 21.37ms
+44 bytes from 00:FF:CC:BB:EE:AA id 1 time 22.31ms
+44 bytes from 00:FF:CC:BB:EE:AA id 2 time 21.28ms
+44 bytes from 00:FF:CC:BB:EE:AA id 3 time 13.36ms
+44 bytes from 00:FF:CC:BB:EE:AA id 4 time 30.08ms
+^Z
+[1]+  Stopped                 l2ping 00:FF:CC:BB:EE:AA
+
+
+## BLUETOOTH DEVICE EXTRA INFO #######################################################################
+
+
+quit
+
+
+
+###
+BLUETOOTH SERVICES AND PROFILES INFO
+
+The Bluetooth technology works with profiles. Profiles define standards to deliver a large choice of services. Profiles use Bluetooth protocols and
+some profiles even require other profiles.
+[FOR MORE INFO] https://wiki.tizen.org/Bluetooth
+
+In order to use Bluetooth, a device must be compatible with the subset of Bluetooth profiles (often called services) necessary to use the desired services. A Bluetooth profile is a specification regarding an aspect of Bluetooth-based wireless communication between devices.
+[PROFILE SPECIFICATIONS] https://en.wikipedia.org/wiki/Bluetooth_profile
+
+
+Tizen Common and BlueZ stack info
+https://wiki.tizen.org/Bluetooth
+
+Tizen Community and Glossary
+https://wiki.tizen.org/Glossary
+https://www.tizen.org/about
+
+Tizen Development
+https://wiki.tizen.org/Application_Development
+
+BlueZ [Features][Distros][Platforms]
+http://www.bluez.org/about/
+
+
+
+###
+MORE CONFIG INFO
+Setup of a Bluetooth Network Aggregation Point (NAP)
+https://wiki.gentoo.org/wiki/Bluetooth_Network_Aggregation_Point
+
+                                                       +−−−−−−−−−−+
+                             Global IP address  ┌─────>╎ Internet ╎
+                                                │      +−−−−−−−−−−+
+                                                │
+                                                v
+                          ┌────────────────────────────────────────────┐
+                          │                   Router                   │
+                          │ (with DHCP and routing (NAT) capabilities) │
+                          └────────────────────────────────────────────┘
+                                         ^              ^
+                                         │              │
+┌────────────┐       ┌────────────┐      │              │      +−−−−−−−−−−−−−−−+
+│ Cell phone │<─────>│ Gentoo-Box │<─────┘              └─────>╎ Local network ╎
+└────────────┘       └────────────┘                            +−−−−−−−−−−−−−−−+
+                                         Local IP address
+
+[Tools for testing]
+bluez-test-network utility - use for testing PAN connection initiated from server side, and a monitor-bluetooth utility to watch what is going behind the D-Bus scene, because watching /var/log/messages can be not enough.
+
+bt-monitor
+http://manpages.ubuntu.com/manpages/trusty/man1/bt-monitor.1.html
+
+btscanner
+apt install btscanner
+//shows detailed information about detected devices
