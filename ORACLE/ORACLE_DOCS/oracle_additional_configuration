@@ -1,0 +1,36 @@
+/opt/oracle_base/oracle_sw/bin
+
+startup
+lsnrctl
+lsnrctl show
+lsnrctl start
+lsnrctl status
+shutdown immediate
+
+https://localhost:5500
+
+*****sqlplus / as sysdba*****
+sqlplus sys as sysdba
+
+
+ORDERED
+
+/opt/oracle_base/oracle_sw/bin
+./dbca
+
+env
+export ORACLE_SID=sev
+echo $PATH
+PATH=/opt/oracle_base/oracle_sw/bin
+export ORACLE_HOME=/opt/oracle_base/oracle_sw/
+
+lsnrctl start
+
+sqlplus / as sysdba
+/opt/oracle_base/oracle_sw/dbs/initsev.ora
+if missing rename init.ora to initsev.ora
+
+edit init.ora rename database orcl with original (max 8 chars)
+
+create spfile from pfile;
+
