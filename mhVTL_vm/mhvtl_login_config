@@ -1,0 +1,63 @@
+mhVTL & WebUI – Prebuilt VM Download
+By Max | 15 Jan 20173 Comments
+Recently to ease deployment of VTL resources in lab environments I built a pre-configured VM containing the mhVTL and the WebUI (GUI) with iSCSI support.  I figured I could share that VM here for the community.  The resulting OVA file has been tested successfully with VMware Fusion, Workstation, and Oracle Virtual Box.
+
+mhVTL OVA Download
+Download mhVTL.ova here
+
+The VM is based on CentOS 6.8 with only minimal packages installed to support the mhVTL and mhVTL-GUI web interface with iSCSI support.  As such there is no OS GUI.
+
+Network configuration is set to DHCP and the hostname is set to mhvtl.example.pvt
+
+Shell / SSH login user is root using the password of P@ssw0rd
+
+A second virtual disk has been mapped to /vtl-media and is thin provisioned and expandable to 32GB in size.
+
+ 
+
+Following deployment it is recommended you complete the following prior to connecting the VM to your network:
+
+Set the Hostname
+Open the following file into a text editor, like VI or Nano.
+01
+vi /etc/sysconfig/network
+Change the hostname value to the fully qualified name of your computer.
+HOSTNAME=mhvtl.example.pvt
+Save your changes and exit the text editor. The new name will be applied after your next reboot.
+Set a DHCP Address
+Note that the NIC may change to eth1 depending on the VM environment being deployed into.
+
+Open the configuration file for the first network interface, eth0, into a text editor.
+01
+vi /etc/sysconfig/network-scripts/ifcfg-eth0
+Modify the file to look similar to the example below.
+DEVICE=eth0
+TYPE=Ethernet
+ONBOOT=yes
+BOOTPROTO=dhcp
+IPV4_FAILURE_FATAL=yes
+NAME="System eth0"
+Save your changes and exit the text editor.
+Restart the network service.
+02
+service network restart
+Set a Static IP Address
+Note that the NIC may change to eth1 depending on the VM environment being deployed into.
+
+Open the configuration file for the first network interface, eth0, into a text editor.
+01
+vi /etc/sysconfig/network-scripts/ifcfg-eth0
+Modfy the configuration file to look similar to the one below.
+DEVICE=eth0
+TYPE=Ethernet
+ONBOOT=yes
+BOOTPROTO=none
+IPADDR=172.30.0.53
+PREFIX=24
+GATEWAY=172.30.0.1
+IPV4_FAILURE_FATAL=yes
+NAME="System eth0"
+Save your changes and exit the text editor.
+Restart the network service.
+02
+service network restart
