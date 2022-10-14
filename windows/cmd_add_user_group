@@ -1,0 +1,39 @@
+https://www.windows-commandline.com/add-user-to-group-from-command-line/
+
+
+
+Add user to group from command line (CMD)
+by SRINI
+Windows provides command line utilities to manager user groups. In this post, learn how to use the command net localgroup to add user to a group from command prompt’
+
+Add user to a group
+Run the steps below –
+
+Open elevated command prompt
+Run the below command
+net localgroup group_name UserLoginName /add
+For example to add a user ‘John’ to administrators group, we can run the below command.
+
+net localgroup administrators John /add
+Few more examples:
+To add a domain user to local users group:
+
+net localgroup users domainname\username /add
+This command should be run when the computer is connected to the network. Otherwise you will get the below error.
+
+
+H:\>net localgroup users domain\user /add
+System error 1789 has occurred.
+The trust relationship between this workstation and the primary domain failed.
+To add a domain user to local administrator group:
+
+net localgroup administrators domainname\username /add
+To add a user to remote desktop users group:
+
+net localgroup "Remote Desktop Users" UserLoginName  /add
+To add a user to debugger  users group: 
+
+net localgroup "Debugger users" UserLoginName /add
+To add a user to Power users group: 
+
+net localgroup "Power users" UserLoginName /add
