@@ -1,0 +1,52 @@
+VMWARE API CIM
+https://pubs.vmware.com/vsphere-50/index.jsp?topic=%2Fcom.vmware.cimsdk.smashref.doc_50%2Fclass_CIM_FileSystem.html
+
+POWERCLI OFFICIAL DOWNLOAD
+https://pubs.vmware.com/vsphere-50/index.jsp?topic=%2Fcom.vmware.vsphere.install.doc_50%2FGUID-F02D0C2D-B226-4908-9E5C-2E783D41FE2D.html
+https://my.vmware.com/web/vmware/details?productId=614&downloadGroup=PCLI650R1
+
+POWER SHELL INSTALL POWERCLI
+https://blogs.vmware.com/PowerCLI/2017/04/powercli-install-process-powershell-gallery.html
+https://thesolving.com/es/virtualizacion/como-instalar-y-configurar-vmware-powercli-version-10/
+https://www.altaro.com/vmware/install-powercli-powershellget/
+
+UPDATE POWERCLI POWERSHELL
+https://blogs.vmware.com/PowerCLI/2017/08/updating-powercli-powershell-gallery.html
+
+CHANGE ESX HOST NAME
+https://kb.vmware.com/s/article/1010821
+
+MORE ALTARO VMWARE
+https://www.altaro.com/vmware/
+
+CONNECT TO POWERCLI
+https://www.ivobeerens.nl/2018/07/18/quick-tip-powercli-invalid-server-certificate-error/
+https://blogs.vmware.com/PowerCLI/2013/03/back-to-basics-connecting-to-vcenter-or-a-vsphere-host.html
+
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+Import-Module VMware.VimAutomation.Core
+Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false
+Connect-VIServer -Server 192.168.0.124 Credential(Get-Credential)
+
+--------------------------------------------------------------------
+VMWARE CODE POWERCLI CMDLETS
+https://code.vmware.com/doc/preview?id=6330#/doc/Get-VM.html
+--------------------------------------------------------------------
+
+SNAPSHOT VMWARE POWERCLI
+https://www.petri.com/use-powercli-create-snapshot
+
+UPGRADE VMWARE TOOLS POWERCLI
+https://www.petri.com/manage-vmware-tools-powercli
+
+VMWARE API SCRIPTING GUIDE PDF
+https://www.vmware.com/pdf/Scripting_API_23.pdf
+
+VMWARE QUIESCEND SNAPSHOT
+https://www.acronis.com/en-us/blog/posts/vmware-quiesce-or-not-quiesce
+
+INSTALL VMWARE TOOLS POWERCLI
+https://www.petri.com/manage-vmware-tools-powercli
+
+--------------------------------------------------------------------
+
