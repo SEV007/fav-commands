@@ -1,0 +1,16 @@
+Hombre, con el tema de montar entornos y el maquinote que has pillado...
+Siempre puedes segmentarte una DMZ, montarte una honeynet con servicios
+que simulen un entorno corporativo, exponerla a Internet, monitorizarla
+con un IDS y montarte un dashboard para analizar los datos
+
+Si haces eso aprenderás um cojon de cosas y podrás publicar tus propios
+informes de threat intelligence periòdicamente
+
+Con un proyecto así a tus espaldas, seguro que podrías encontrar curro
+como analista en cualquier blue team que te propongas
+
+Para el tema análisis te recomendaría SELKS, una máquina que ya viene
+montada con un IDS Suricata por debajo para analizar los pcap de las
+capturas que le pases. Por encima lleva una pila ELK para normalizar,
+almacemar y graficar los datos. Y tiene una interfaz llamada Scirius,
+para gestionar las reglas del IDS vía web.
