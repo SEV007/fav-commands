@@ -1,0 +1,229 @@
+Linux: Check Network Connection Command
+Author: Vivek Gite Last updated: January 10, 2011 9 comments
+
+How do I check network connections under Linux using command line options?
+
+You need to use any one of the following tool or command under Linux to check network connections including their state, source/destination, and addresses and bandwidth usage etc:
+
+ADVERTISEMENT
+
+
+ss command: It dump socket (network connection) statistics such as all TCP / UDP connections, established connection per protocol (e.g., display all established ssh connections), display all the tcp sockets in various state such as ESTABLISHED or FIN-WAIT-1 and so on.
+netstat command: It can display network connections, routing tables, interfaces and much more.
+tcptrack and iftop commands: Displays information about TCP connections it sees on a network interface and display bandwidth usage on an interface by host respectively.
+Display Currently Established, Closed, Orphaned and Waiting TCP sockets, enter:
+# ss -s
+
+Sample outputs:
+
+Total: 529 (kernel 726)
+TCP:   1403 (estab 286, closed 1099, orphaned 1, synrecv 0, timewait 1098/0), ports 774
+
+Transport Total     IP        IPv6
+*	  726       -         -        
+RAW	  0         0         0        
+UDP	  27        13        14       
+TCP	  304       298       6        
+INET	  331       311       20       
+FRAG	  0         0         0        
+Or you can use the netstat command as follows:
+# netstat -s
+
+Sample outputs:
+
+Ip:
+    102402748 total packets received
+    3 with invalid addresses
+    0 forwarded
+    0 incoming packets discarded
+    102192035 incoming packets delivered
+    95627316 requests sent out
+Icmp:
+    6726 ICMP messages received
+    167 input ICMP message failed.
+    ICMP input histogram:
+        destination unreachable: 2353
+        timeout in transit: 4
+        echo requests: 4329
+    10323 ICMP messages sent
+    0 ICMP messages failed
+    ICMP output histogram:
+        destination unreachable: 5994
+        echo replies: 4329
+IcmpMsg:
+        InType3: 2353
+        InType8: 4329
+        InType11: 4
+        OutType0: 4329
+        OutType3: 5994
+Tcp:
+    839222 active connections openings
+    2148984 passive connection openings
+    1480 failed connection attempts
+    1501 connection resets received
+    281 connections established
+    101263451 segments received
+    94668430 segments send out
+    9820 segments retransmited
+    0 bad segments received.
+    1982 resets sent
+Udp:
+    1024635 packets received
+    18 packets to unknown port received.
+    0 packet receive errors
+    1024731 packets sent
+TcpExt:
+    592 invalid SYN cookies received
+    396 resets received for embryonic SYN_RECV sockets
+    2 packets pruned from receive queue because of socket buffer overrun
+    3 ICMP packets dropped because they were out-of-window
+    2166428 TCP sockets finished time wait in fast timer
+    2773 time wait sockets recycled by time stamp
+    11 packets rejects in established connections because of timestamp
+    1223930 delayed acks sent
+    298 delayed acks further delayed because of locked socket
+    Quick ack mode was activated 263 times
+    16413851 packets directly queued to recvmsg prequeue.
+    627914668 packets directly received from backlog
+    1146535624 packets directly received from prequeue
+    43628505 packets header predicted
+    10588802 packets header predicted and directly queued to user
+    8646100 acknowledgments not containing data received
+    44710342 predicted acknowledgments
+    5 times recovered from packet loss due to fast retransmit
+    596 times recovered from packet loss due to SACK data
+    2 bad SACKs received
+    Detected reordering 1 times using FACK
+    Detected reordering 4 times using time stamp
+    3 congestion windows fully recovered
+    7 congestion windows partially recovered using Hoe heuristic
+    TCPDSACKUndo: 44
+    208 congestion windows recovered after partial ack
+    2743 TCP data loss events
+    190 timeouts after SACK recovery
+    90 timeouts in loss state
+    2268 fast retransmits
+    220 forward retransmits
+    3704 retransmits in slow start
+    1318 other TCP timeouts
+    TCPRenoRecoveryFail: 2
+    98 sack retransmits failed
+    226 packets collapsed in receive queue due to low socket buffer
+    267 DSACKs sent for old packets
+    1 DSACKs sent for out of order packets
+    272 DSACKs received
+    34 connections reset due to unexpected data
+    184 connections reset due to early user close
+    147 connections aborted due to timeout
+IpExt:
+    InBcastPkts: 10
+Display All Open Network Ports
+Use the ss command as follows:
+# ss -l
+
+Sample outputs:
+
+Recv-Q Send-Q                          Local Address:Port                              Peer Address:Port   
+0      50                                  127.0.0.1:mysql                                        *:*       
+0      128                                 127.0.0.1:11211                                        *:*       
+0      128                                         *:sunrpc                                       *:*       
+0      128                                        :::www                                         :::*       
+0      128                                         *:55153                                        *:*       
+0      3                                  10.1.11.27:domain                                       *:*       
+0      3                               192.168.1.101:domain                                       *:*       
+0      3                                   127.0.0.1:domain                                       *:*       
+0      3                                          :::domain                                      :::*       
+0      128                                        :::ssh                                         :::*       
+0      128                                         *:ssh                                          *:*       
+0      128                                 127.0.0.1:ipp                                          *:*       
+0      128                                       ::1:ipp                                         :::*       
+0      128                                        :::afs3-callback                                     :::*       
+0      128                                         *:afs3-callback                                      *:*       
+0      100                                         *:smtp                                         *:*       
+0      128                                       ::1:953                                         :::*       
+0      128                                 127.0.0.1:953                                          *:*       
+0      5                                           *:8000                                         *:*       
+
+OR Use the netstat command as follows:
+# netstat -tulpn
+
+Sample outputs:
+
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      1380/mysqld     
+tcp        0      0 127.0.0.1:11211         0.0.0.0:*               LISTEN      1550/memcached  
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      936/portmap     
+tcp        0      0 0.0.0.0:55153           0.0.0.0:*               LISTEN      1025/rpc.statd  
+tcp        0      0 10.1.11.27:53           0.0.0.0:*               LISTEN      1343/named      
+tcp        0      0 192.168.1.101:53        0.0.0.0:*               LISTEN      1343/named      
+tcp        0      0 127.0.0.1:53            0.0.0.0:*               LISTEN      1343/named      
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      979/sshd        
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      1828/cupsd      
+tcp        0      0 0.0.0.0:7001            0.0.0.0:*               LISTEN      10129/transmission
+tcp        0      0 0.0.0.0:25              0.0.0.0:*               LISTEN      1694/master     
+tcp        0      0 127.0.0.1:953           0.0.0.0:*               LISTEN      1343/named      
+tcp        0      0 0.0.0.0:8000            0.0.0.0:*               LISTEN      1539/icecast2   
+tcp6       0      0 :::80                   :::*                    LISTEN      1899/apache2    
+tcp6       0      0 :::53                   :::*                    LISTEN      1343/named      
+tcp6       0      0 :::22                   :::*                    LISTEN      979/sshd        
+tcp6       0      0 ::1:631                 :::*                    LISTEN      1828/cupsd      
+tcp6       0      0 :::7001                 :::*                    LISTEN      10129/transmission
+tcp6       0      0 ::1:953                 :::*                    LISTEN      1343/named      
+udp        0      0 239.255.255.250:1900    0.0.0.0:*                           11937/opera     
+udp        0      0 239.255.255.250:1900    0.0.0.0:*                           11937/opera     
+udp        0      0 0.0.0.0:111             0.0.0.0:*                           936/portmap     
+udp        0      0 0.0.0.0:777             0.0.0.0:*                           1025/rpc.statd  
+udp        0      0 0.0.0.0:38297           0.0.0.0:*                           1025/rpc.statd  
+udp        0      0 192.168.1.101:33843     0.0.0.0:*                           11937/opera     
+udp        0      0 10.1.11.27:53           0.0.0.0:*                           1343/named      
+udp        0      0 192.168.1.101:53        0.0.0.0:*                           1343/named      
+udp        0      0 127.0.0.1:53            0.0.0.0:*                           1343/named      
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           5840/dhclient   
+udp        0      0 127.0.0.1:11211         0.0.0.0:*                           1550/memcached  
+udp        0      0 0.0.0.0:7001            0.0.0.0:*                           10129/transmission
+udp        0      0 10.1.11.27:33372        0.0.0.0:*                           11937/opera     
+udp6       0      0 :::53                   :::*                                1343/named  
+Display All TCP Sockets
+Type the ss command as follows:
+# ss -t -a
+
+Or use the netstat command as follows:
+# netstat -nat
+
+Display All UDP Sockets
+Type the ss command as follows:
+# ss -u -a
+
+Or use the netstat command as follows:
+# netstat -nau
+
+lsof Command
+You can use the lsof command follows to list more information about open ports:
+# lsof -i :portNumber
+# lsof -i tcp:portNumber
+# lsof -i udp:portNumber
+# lsof -i :80 | grep LISTEN
+
+View Established Connections Only
+Use the netstat command as follows:
+# netstat -natu | grep 'ESTABLISHED'
+
+Say Hello To tcptrack
+The tcptrack command displays the status of TCP connections that it sees on a given network interface. tcptrack monitors their state and displays information such as state, source/destination addresses and bandwidth usage in a sorted, updated list very much like the top command.
+# tcptrack -i eth0
+
+Sample outputs:
+Fig.01: tcptrack in Action
+Fig.01: tcptrack in Action
+
+
+See how to install and use the tcptrack tool under Linux for more information.
+iftop command
+The iftop command listens to network traffic on a given network interface such as eth0, and displays a table of current bandwidth usage by pairs of hosts:
+# iftop -i eth1
+
+It can display or analyses packet flowing in and out of the 192.168.1.0/24 network:
+# iftop -F 192.168.1.0/24
+
+Sample outputs:
