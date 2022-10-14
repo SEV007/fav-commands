@@ -1,0 +1,22 @@
+zram
+https://bbs.archlinux.org/viewtopic.php?id=184655
+
+See if booting with zswap.enabled=1 in the kernel line helps.
+
+Use dstat (e.g. "dstat -cdnpmgs --top-bio --top-cpu --top-mem") to see what exactly is happening when your CPU cores get maxed out and what is maxing them out.
+
+
+
+zram config
+https://www.cnx-software.com/2018/05/14/running-out-of-ram-in-ubuntu-enable-zram/
+
+https://meta.discourse.org/t/how-to-manually-configure-zram-on-ubuntu/44014
+
+
+zram how to use
+https://askubuntu.com/questions/174579/how-do-i-use-zram
+
+
+zram advance config
+https://www.atareao.es/como/acelerar-ubuntu-en-ordenadores-antiguos/
+https://github.com/StuartIanNaylor/zram-config
