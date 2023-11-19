@@ -1,0 +1,8 @@
+LXD and LXC are two distinct implementations of Linux containers1234.
+LXC is a low-level user space interface for the Linux kernel containment features,
+consisting of tools, templates, and library and language bindings13. 
+LXD is a more intuitive and user-friendly tool aimed at making it easy 
+to work with Linux containers124. LXD is built on top of LXC to provide a new, 
+better user experience34. It uses LXC through liblxc and its Go binding to create and manage the containers
+
+https://sysadminote.com/how-to-install-lxc-lxd-to-create-containers-on-linux/
