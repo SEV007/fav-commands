@@ -6,3 +6,101 @@ to work with Linux containers124. LXD is built on top of LXC to provide a new,
 better user experience34. It uses LXC through liblxc and its Go binding to create and manage the containers
 
 https://sysadminote.com/how-to-install-lxc-lxd-to-create-containers-on-linux/
+
+https://documentation.ubuntu.com/lxd/en/latest/tutorial/first_steps/
+
+HOW TO
+https://documentation.ubuntu.com/lxd/en/latest/howto/
+These how-to guides cover key operations and processes in LXD.
+Clustering
+Configure networks
+Configure storage
+Form a cluster
+Manage a cluster
+Manage instances
+Recover a cluster
+Set up cluster groups
+Getting started
+Access the documentation
+Access the UI
+Contribute to LXD
+Get support
+Initialize LXD
+Install LXD
+Manage the snap
+Images
+Associate profiles
+Copy and import images
+Create images
+Manage images
+Use remote images
+Instances
+Access files
+Access the console
+Add a routed NIC to a VM
+Back up instances
+Configure instances
+Create instances
+Manage instances
+Run commands
+Troubleshoot errors
+Use cloud-init
+Use profiles
+LXD server and client
+Add command aliases
+Add remote servers
+Configure the LXD server
+Expose LXD to the network
+Migration
+Import existing machines
+Migrate from LXC
+Move instances
+Networking
+Configure a network
+Configure as BGP server
+Configure forwards
+Configure network ACLs
+Configure network zones
+Create a network
+Display IPAM information
+Configure your firewall
+Integrate with resolved
+Configure load balancers
+Configure peer routing
+Set up OVN
+Production setup
+Back up a server
+Benchmark performance
+Increase bandwidth
+Monitor metrics
+Recover instances
+Projects
+Confine projects to users
+Create and configure
+Work with projects
+Storage
+Back up a volume
+Create an instance in a pool
+Manage buckets
+Manage pools
+Manage volumes
+Move or copy a volume
+Troubleshooting
+Configure your firewall
+Debug LXD
+Frequently asked
+Troubleshoot instances
+
+
+https://github.com/lxc/lxcfs
+LXCFS is a small FUSE filesystem written with the intention of making Linux containers 
+feel more like a virtual machine. It started as a side-project of LXC but is useable by any runtime.
+LXCFS will take care that the information provided by crucial files in procfs such as:
+/proc/cpuinfo
+/proc/diskstats
+/proc/meminfo
+/proc/stat
+/proc/swaps
+/proc/uptime
+/proc/slabinfo
+/sys/devices/system/cpu/online
