@@ -4,6 +4,9 @@ https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-qemu-ga.html
 How to enable QEMU guest agent in KVM
 https://access.redhat.com/solutions/732773
 
+QEMU Guest Agent Protocol Reference
+https://www.qemu.org/docs/master/interop/qemu-ga-ref.html
+
 19.2 virsh Commands that Require QEMU GA
   
 Several virsh commands require QEMU GA for their functionality. Here are some of them:
