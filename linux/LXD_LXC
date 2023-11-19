@@ -1,3 +1,10 @@
+LXC, while older, has not been as popular with developers as Docker has proven to be. 
+This is partly due to the difference in use cases that these two technologies focus on, with
+LXC having a focus on sys admins that’s similar to what solutions like the Solaris operating system, 
+with its Solaris Zones, Linux OpenVZ, and FreeBSD, with its BSD Jails virtualization system. These solutions 
+provide OS containers for a whole system, which is achieved, typically, by providing a different root for the filesystem,
+and creating environments that are isolated from each other and can’t share state. 
+
 LXD and LXC are two distinct implementations of Linux containers1234.
 LXC is a low-level user space interface for the Linux kernel containment features,
 consisting of tools, templates, and library and language bindings13. 
