@@ -1,0 +1,63 @@
+Live Block Device Operations
+https://www.qemu.org/docs/master/interop/live-block-operations.html
+
+Contents
+Live Block Device Operations
+Disk image backing chain notation
+Brief overview of live block QMP primitives
+Interacting with a QEMU instance
+Example disk image chain
+A note on points-in-time vs file names
+Live block streaming — block-stream
+QMP invocation for block-stream
+Live block commit — block-commit
+QMP invocation for block-commit
+Live disk synchronization — drive-mirror and blockdev-mirror
+QMP invocation for drive-mirror
+QMP invocation for live storage migration with drive-mirror + NBD
+Notes on blockdev-mirror
+QMP invocation for blockdev-mirror
+Live disk backup — blockdev-backup and the deprecated``drive-backup``
+QMP invocation for drive-backup
+Moving from the deprecated drive-backup to newer blockdev-backup
+Notes on blockdev-backup
+QMP invocation for blockdev-backup
+
+Dirty Bitmaps and Incremental Backup
+https://www.qemu.org/docs/master/interop/bitmaps.html
+This document explains the conceptual mechanisms, as well as up-to-date,
+complete and comprehensive documentation on the API to manipulate them. (Hopefully, the “why”, “what”, and “how”.)
+
+The intended audience for this document is developers who are adding QEMU backup features to management applications,
+ or power users who run and administer QEMU directly via QMP.
+
+Contents
+Dirty Bitmaps and Incremental Backup
+Overview
+Supported Image Formats
+Dirty Bitmap Names
+Bitmap Status
+Basic QMP Usage
+Supported Commands
+Creation: block-dirty-bitmap-add
+Deletion: block-dirty-bitmap-remove
+Resetting: block-dirty-bitmap-clear
+Enabling: block-dirty-bitmap-enable
+Enabling: block-dirty-bitmap-disable
+Merging, Copying: block-dirty-bitmap-merge
+Querying: query-block
+Bitmap Persistence
+Transactions
+Justification
+Supported Bitmap Transactions
+Incremental Backups - Push Model
+Example: New Incremental Backup Anchor Point
+Example: Resetting an Incremental Backup Anchor Point
+Example: First Incremental Backup
+Example: Second Incremental Backup
+Example: Incremental Push Backups without Backing Files
+Example: Multi-drive Incremental Backup
+Push Backup Errors & Recovery
+Example: Individual Failures
+Example: Partial Transactional Failures
+Example: Grouped Completion Mode
