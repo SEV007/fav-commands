@@ -2,5 +2,9 @@ Setting Up a KVM VM Host Server
 https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-qemu-host.html
 
 Virtual Machine Administration Using QEMU Monitor
+Getting Information about the Guest System
+Managing Devices
+Managing Virtual Machine Snapshots
+Live Migration
 https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-qemu-monitor.html
 
