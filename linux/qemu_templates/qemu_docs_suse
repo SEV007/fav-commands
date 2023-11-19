@@ -8,3 +8,12 @@ Managing Virtual Machine Snapshots
 Live Migration
 https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-qemu-monitor.html
 
+Basic Installation with qemu-system-ARCH
+https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-qemu-guest-inst.html
+
+qemu-system-x86_64 -name "sles"-machine accel=kvm -M pc -m 768 \
+-smp 2 -boot d \
+-drive file=/images/sles/hda,if=virtio,index=0,media=disk,format=raw \
+-drive file=/isos/SLE-15-SP2-Online-ARCH-GM-media1.iso,index=1,media=cdrom \
+-net nic,model=virtio,macaddr=52:54:00:05:11:11 -net user \
+-vga cirrus -balloon virtio
