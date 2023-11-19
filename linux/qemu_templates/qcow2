@@ -1,2 +1,0 @@
-qemu-img create -f qcow2 -o preallocation=off <disk-name> <disk-size>
-maximum disk size (you can use k, M, G, T, P or E as suffixes)
