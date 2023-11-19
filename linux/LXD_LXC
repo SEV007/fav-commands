@@ -104,6 +104,3 @@ LXCFS will take care that the information provided by crucial files in procfs su
 /proc/uptime
 /proc/slabinfo
 /sys/devices/system/cpu/online
-
-INCUS container and virtual machine manager and backup
-https://linuxcontainers.org/incus/
