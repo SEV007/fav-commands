@@ -1,0 +1,26 @@
+QEMU Guest Agent
+https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-qemu-ga.html
+
+How to enable QEMU guest agent in KVM
+https://access.redhat.com/solutions/732773
+
+19.2 virsh Commands that Require QEMU GA
+  
+Several virsh commands require QEMU GA for their functionality. Here are some of them:
+
+virsh guestinfo
+Prints information about the guest from the guest's point of view.
+
+virsh guestvcpus
+Queries or changes the state of virtual CPUs from the guest's point of view.
+
+virsh set-user-password
+Sets the password for a user account in the guest.
+
+virsh domfsinfo
+Shows a list of mounted file systems within the running domain.
+
+virsh dompmsuspend
+Suspends a running guest.
+
+19.3 Enhancing 
