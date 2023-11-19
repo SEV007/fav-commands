@@ -1,1 +1,0 @@
-qemu-system-x86_64 -hda ./metasploitable2.qcow2 -m 256 -enable-kvm
