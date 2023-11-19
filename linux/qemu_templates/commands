@@ -6,6 +6,7 @@ maximum disk size (you can use k, M, G, T, P or E as suffixes)
 
 #qemu Linux host
 qemu-system-x86_64 -m 1024 -enable-kvm -drive file=win,format=raw -usbdevice tablet -vga std -soundhw hda
+qemu-system-x86_64 -cdrom /home/user/CentOS-7-x86_64-DVD-1708.iso -hda xenp.qcow2 -usb -m 1024 -enable-kvm -vga qxl -netdev user,id=mynet0,net=192.168.0.0/24,dhcpstart=192.168.0.9
 
 #qemu Windows host
 qemu-system-x86_64 -cdrom C:\Users\sev\Desktop\qemu\ubuntu-23.10.1-desktop-amd64.iso -drive file=C:\Users\sev\Desktop\qemu\linux.qcow,format=qcow2 -m 2048 -vga std
