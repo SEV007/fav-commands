@@ -1,0 +1,14 @@
+BOOTREC.exe
+
+Repair or replace a partition boot sector.
+
+Syntax  
+      BOOTREC /FIXMBR      Write an MBR to the system partition.
+
+      BOOTREC /FIXBOOT     Writes a new boot sector onto the system partition.
+
+      BOOTREC /SCANOS      Scans all disks for Windows installations and display entries not currently in the BCD store.
+
+      BOOTREC /REBUILDBCD  Scans all disks for Windows installations and provide a choice of which entries to add to the BCD store.
+      
+https://ss64.com/nt/bootrec.html
