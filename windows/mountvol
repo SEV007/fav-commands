@@ -1,0 +1,22 @@
+MONTVOL
+
+Link volumes without requiring a drive letter. Create, delete or list a volume mount point. NTFS junction mount points can only be used with local NTFS directories, (unlike DFS junction points which will target a network share). MOUNTVOL can be found on the Windows CD i386 folder.
+
+Syntax
+      MOUNTVOL [drive:]path VolumeName
+      MOUNTVOL [drive:]path /D
+      MOUNTVOL [drive:]path /L
+      MOUNTVOL [drive:]path /p
+      MOUNTVOL /R
+      MOUNTVOL [/N | /E]
+      MOUNTVOL drive: /S
+
+Options
+
+    path     : An existing NTFS folder where the mount point will reside.
+
+ VolumeName  : The volume name that is the target of the mount point.
+               In the form \\?\Volume{GUID}\, where {GUID} is a globally unique identifier
+               e.g.   \\?\Volume\{2eca078d-5cbc-43d3-aff8-7e8511f60d0e}\
+
+https://ss64.com/nt/mountvol.html
