@@ -1,0 +1,3 @@
+https://wiki.archlinux.org/title/EFI_system_partition
+
+https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface
