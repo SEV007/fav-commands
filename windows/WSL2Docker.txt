@@ -1,0 +1,19 @@
+https://docs.docker.com/desktop/wsl/
+
+wsl -d Ubuntu
+wsl --distribution Ubuntu
+
+wsl --status Ubuntu
+
+wsl -l -v
+wsl --list --verbose
+
+wsl -l -o
+wsl --list --online
+
+wsl --shutdown Ubuntu
+
+wsl -t ubuntu
+wsl --terminate Ubuntu
+
+
