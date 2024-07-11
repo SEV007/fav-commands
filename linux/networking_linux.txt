@@ -1,0 +1,9 @@
+/etc/hosts.conf
+/etc/resolv.conf
+/etc/nsswtich.conf
+
+https://www.youtube.com/watch?v=XnepNult6UI
+
+https://www.youtube.com/watch?v=VNu2LtIF9D0
+
+https://tecadmin.net/what-is-etc-nsswitch-conf-file/
