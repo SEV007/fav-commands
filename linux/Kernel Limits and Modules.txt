@@ -1,0 +1,33 @@
+https://www.geeksforgeeks.org/the-linux-kernel/
+
+https://wiki.archlinux.org/title/Kernel
+
+https://wiki.archlinux.org/title/Kernel_parameters
+
+https://wiki.archlinux.org/title/Limits.conf
+
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_monitoring_and_updating_the_kernel/setting-limits-for-applications_managing-monitoring-and-updating-the-kernel
+
+
+https://wiki.archlinux.org/title/Kernel_module
+
+https://retrocomputing.stackexchange.com/questions/4366/since-when-are-linux-drivers-loaded-as-kernel-modules#:~:text=Kernel%20modules%20have%20been%20available%20since%20version%201.1.85,as%20a%20module%20was%20available%20as%20a%20module.
+Kernel modules have been available since version 1.1.85 in January 1995 
+(see the introduction of README.modules in the 1.1.85 patch). 
+At first, few drivers were actually available as modules, but within a few years
+everything that made sense as a module was available as a module.
+When developing a new driver for the kernel, it’s easier to work on it as a module 
+than a built-in driver: instead of rebooting when you make changes to the driver, you can unload the old module and load the new one in its place. In most cases though drivers are made available in both forms (built-in and in a module) before release, assuming they’re part of the main kernel source code. Drivers which are provided outside the main kernel source code can really only be made available as modules, unless the kernel itself is forked (which does happen).
+
+https://wiki.archlinux.org/title/Kernel_module
+
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/kernel_administration_guide/chap-documentation-kernel_administration_guide-working_with_kernel_modules
+
+https://wiki.archlinux.org/title/Compile_kernel_module
+
+https://wiki.archlinux.org/title/Dynamic_Kernel_Module_Support
+
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/kernel_administration_guide/ch-manually_upgrading_the_kernel#:~:text=Manually%20upgrading%20the%20kernel%201%205.1.%20Overview%20of,...%206%205.6.%20Verifying%20the%20boot%20loader%20
+
+https://perf.wiki.kernel.org/index.php/Main_Page
+
