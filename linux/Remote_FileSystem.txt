@@ -1,0 +1,31 @@
+targetcli
+
+sshfs
+https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
+https://help.ubuntu.com/community/SSHFS
+https://stackoverflow.com/questions/45974793/mounting-remote-file-system-or-directory-into-local-linux-machine#:~:text=To%20mount%20remote%20directory%20into%20local%20machine%2C%201st,with%20yum%20and%20so%20on%20and%20so%20forth.
+
+
+nfs
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/managing_storage_devices/configuring-an-iscsi-target_managing-storage-devices
+https://linuxize.com/post/how-to-mount-an-nfs-share-in-linux/
+
+LUNS
+tgt manual configuration of lun
+https://www.tecmint.com/create-luns-using-lvm-in-iscsi-target/
+
+Add / Resize / Remove LUNS
+https://www.suse.com/support/kb/doc/?id=000017762
+lsscsi
+multipath
+udevtriger
+
+udev
+udevtriger
+https://opensource.com/article/18/11/udev
+
+Device Mapper Multipath Input Output often shortened to DM-Multipathing
+and abbreviated as DM-MPIO provides input-output (I/O)
+fail-over and load-balancing by using multipath I/O within Linux for block devices
+https://en.wikipedia.org/wiki/Linux_DM_Multipath
+
