@@ -3,6 +3,8 @@ ipmitool sdr type "Power Supply"
 FreeIPMI
 https://linux.die.net/man/7/freeipmi
 
+https://www.gnu.org/software/freeipmi/
+
 Name
 FreeIPMI - FreeIPMI overview
 Introduction
