@@ -5,3 +5,30 @@ shows ram cache bios etc memory values
 
 dmidecode > dmidecode.txt
 grep -A 5 "Memory Device" dmidecode | grep -e Memory -e Size
+
+https://www.pc-freak.net/blog/check-linux-server-power-supply-state-find-linux-power-supply-broken/
+How to check Linux server power supply state is Okay / How to find out a Linux Power Supply is broken
+
+ipmitool sdr type "Power Supply"
+
+[root@linux-server  systemd]# dmidecode -t chassis
+# dmidecode 3.2
+Getting SMBIOS data from sysfs.
+SMBIOS 2.8 present.
+
+Handle 0x0300, DMI type 3, 21 bytes
+Chassis Information
+        Manufacturer: HP
+        Type: Rack Mount Chassis
+        Lock: Not Present
+        Version: Not Specified
+        Serial Number: CZJ38201ZH
+        Asset Tag:
+        Boot-up State: Critical
+        Power Supply State: Critical
+        Thermal State: Safe
+        Security Status: Unknown
+        OEM Information: 0x00000000
+        Height: 1 U
+        Number Of Power Cords: 2
+        Contained Elements: 0
