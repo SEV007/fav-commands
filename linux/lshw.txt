@@ -1,3 +1,7 @@
 lshw -short -C memory
 
 shows ram cache bios etc memory values
+
+
+dmidecode > dmidecode.txt
+grep -A 5 "Memory Device" dmidecode | grep -e Memory -e Size
