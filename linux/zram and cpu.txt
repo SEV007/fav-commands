@@ -1,0 +1,19 @@
+https://wiki.archlinux.org/title/Zram
+
+https://www.reddit.com/r/linux/comments/11dkhz7/zswap_vs_zram_in_2023_whats_the_actual_practical/
+So, in short, we have 2 extremely similar solutions that diverge in a few key points:
+Zswap is a dynamic memory pool used to compress swap pages. It intercepts the pages before they actually hit your normal swap partition/file and evicts old pages on a LRU basis. The key point here is that zswap does not replace your classic swap, it is design to work alongside it as an intermediate step.
+Zram, on another hand, is a dynamically-allocated and compressible ram disk that can be used to store anything, although the most common use case is to use it as your swap partition. Unlike zswap, zram does not require a normal swap partition/file to be present on your disk, as it will act as the actual swap partition. However, since Linux 4.14, zram can now also be configured with a "writeback" device (CONFIG_ZRAM_WRITEBACK), which allows it to move idle/incompressible pages to a different swap partition (usually on the disk), which is exactly what zswap does.
+Before CONFIG_ZRAM_WRITEBACK was a thing, using a normal swap partition/file alongside swap on zram was generally considered to be a bad practice, since it could cause LRU inversion (the faster swap partition would get filled first, which means newer pages would end up on the slower partition eventually).
+As a general rule of thumb, it was reasonable to use zswap if you planned on having a normal swap partition/file on disk, and swap on zram if you didn't. This made perfect sense and it's an intuitive conclusion. However, now that zram can also be configured to do what zswap does by default, it's a bit unclear when you should use which one and how they differ in practice.
+
+
+https://wiki.archlinux.org/title/CPU_frequency_scaling
+
+https://wiki.archlinux.org/title/Laptop_Mode_Tools
+
+https://wiki.archlinux.org/title/Power_management
+
+
+Kernel Module Example
+https://github.com/VR-25/zram-swap-manager
