@@ -1,10 +1,87 @@
 lshw -short -C memory
-
 shows ram cache bios etc memory values
 
+lshw -class memory
+
+
+DIMM
+dmidecode -t 16
+dmidecode -t 17
+dmidecode -t memory
+dmidecode -t memory | grep -i size
 
 dmidecode > dmidecode.txt
 grep -A 5 "Memory Device" dmidecode | grep -e Memory -e Size
+
+https://linux.die.net/man/8/dmidecode
+Dmi Types
+The SMBIOS specification defines the following DMI types:
+Type	Information
+0
+1	System
+2	Base Board
+3	Chassis
+4	Processor
+5	Memory Controller
+6	Memory Module
+7	Cache
+8	Port Connector
+9	System Slots
+10	On Board Devices
+11	OEM Strings
+12	System Configuration Options
+13	BIOS Language
+14	Group Associations
+15	System Event Log
+16	Physical Memory Array
+17	Memory Device
+18	32-bit Memory Error
+19	Memory Array Mapped Address
+20	Memory Device Mapped Address
+21	Built-in Pointing Device
+22	Portable Battery
+23	System Reset
+24	Hardware Security
+25	System Power Controls
+26	Voltage Probe
+27	Cooling Device
+28	Temperature Probe
+29	Electrical Current Probe
+30	Out-of-band Remote Access
+31	Boot Integrity Services
+32	System Boot
+33	64-bit Memory Error
+34	Management Device
+35	Management Device Component
+36	Management Device Threshold Data
+37	Memory Channel
+38	IPMI Device
+39	Power Supply
+40	Additional Information
+41	Onboard Device
+
+
+---
+EDAC-CTL (Error Detection and Correction) drivers
+https://linux.die.net/man/8/edac-ctl
+---
+LSPCI displaying information about PCI buses in the system and devices connected to them.
+https://linux.die.net/man/8/lspci
+---
+LSUSB displaying information about USB buses in the system and the devices connected to them.
+https://linux.die.net/man/8/lsusb
+---
+biosdecode bios version and virtualization
+https://linux.die.net/man/8/biosdecode
+---
+imvirt imvirt tries to detect if it runs on a physical machine or on a virtualized one. If it detects that it is a virtualized one it also tries to find out which virtualization technology is used.
+https://linux.die.net/man/1/imvirt
+---
+
+###
+FREEIPMI
+https://linux.die.net/man/7/freeipmi
+###
 
 https://www.pc-freak.net/blog/check-linux-server-power-supply-state-find-linux-power-supply-broken/
 How to check Linux server power supply state is Okay / How to find out a Linux Power Supply is broken
