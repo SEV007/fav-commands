@@ -1,0 +1,53 @@
+Logical Volumes LVM
+
+LVM basics
+https://www.digitalocean.com/community/tutorials/how-to-use-lvm-to-manage-storage-devices-on-ubuntu-18-04
+
+HOW TO / Create PV LV VG PART MANAGE
+https://www.golinuxcloud.com/logical-volume-manager-how-to/
+
+CREATE PARTS LVM DURING INSTALLATION RHEL
+https://www.golinuxcloud.com/create-lvm-during-installation-rhel-centos-8/
+
+Ititialize Disk / Partition
+https://www.golinuxcloud.com/pvcreate-command-in-linux/
+
+Create logical volume in a volume group
+https://www.golinuxcloud.com/lvcreate-command-in-linux/
+lvchange / lvremove / lvrename / lvreduce / lvextend / lvdisplay / lvscan / vgcreate / vgcfgrestore
+
+Scans for all logical volumes in the OS
+lvscan
+
+Creates volume group using block devices
+vgcreate
+https://www.golinuxcloud.com/vgcreate-command-in-linux/
+
+
+https://www.golinuxcloud.com/vgcfgrestore-recover-lvm-without-backup/
+Backup metadata of volume group
+vgcfgbackup
+
+Restores metadata of volume group from backup of vgcfgbackup
+vgcfgrestore
+/etc/lvm/backup
+/etc/lvm/archive
+
+SNAPSHOTS
+https://www.golinuxcloud.com/linux-lvm-snapshot-backup-restore-tutorial/
+
+MIRRORED LOGICAL VOLUME
+https://www.golinuxcloud.com/create-mirrored-logical-volume-in-linux/
+
+CHECK DEVICE INTERFACE / lspci / lshw / hdparm / lsblk / lsscsi / dmesg / 
+https://www.golinuxcloud.com/check-disk-type-linux/
+
+PARTITION / PHYSICAL VOLUME / PART / VG / MOUNT / ADD NEW DRIVE / STRIPE / CONVERT LINER TO STRIPE
+https://www.golinuxcloud.com/striped-logical-volume-linux/
+
+PHYSICAL VOLUME LVM
+https://www.redhat.com/sysadmin/create-physical-volume
+
+LVM Architecture
+https://www.golinuxcloud.com/overview-lvm-in-linux/
+
