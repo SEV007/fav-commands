@@ -1,0 +1,10 @@
+Open MPI
+https://www.open-mpi.org/
+https://en.wikipedia.org/wiki/Open_MPI
+
+https://stackoverflow.com/questions/2427399/mpich-vs-openmpi
+https://www.intel.com/content/www/us/en/docs/mpi-library/developer-guide-windows/2021-6/running-an-mpi-program.html#:~:text=The%20mpiexec%20command%20launches%20the%20Hydra%20process%20manager%2C,uses%20the%20number%20of%20cores%20on%20the%20machine.
+https://linux.die.net/man/1/mpiexec
+https://docs.open-mpi.org/en/v5.0.x/man-openmpi/man1/mpirun.1.html
+
+https://stackoverflow.com/questions/37369733/what-is-the-difference-and-relationship-between-mpirun-mpiexec-and-mpiexec-hydr
