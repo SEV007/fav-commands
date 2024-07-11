@@ -40,5 +40,14 @@ yum install targetcli
 [tgt vs targetcli]
 https://www.reddit.com/r/debian/comments/txhesm/iscsi_target_targetcli_vs_tgt/
 
+[SCSI Operation Codes]
+https://www.t10.org/lists/op-num.htm
 
+[SCSI Common Codes & Values]
+https://t10.org/lists/1spc-lst.htm
 
+[ISCSI/LIO]
+https://wiki.archlinux.org/title/ISCSI/LIO
+
+[LIO/SCSI Target]
+https://en.wikipedia.org/wiki/LIO_(SCSI_target)
