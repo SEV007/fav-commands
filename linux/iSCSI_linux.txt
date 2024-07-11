@@ -1,0 +1,44 @@
+
+
+[open-iscsi]
+https://www.informaticar.net/ubuntu-20-04-how-to-setup-iscsi-initiator/
+
+---
+tgt
+https://www.cyberciti.biz/tips/howto-setup-linux-iscsi-target-sanwith-tgt.html
+https://www.unixmen.com/attach-iscsi-target-disks-linux-servers/
+
+.. targetcli ..
+https://www.server-world.info/en/note?os=Ubuntu_20.04&p=iscsi&f=1
+(file device in the example / check for block device if needed)
+http://atodorov.org/blog/2015/04/07/how-to-configure-iscsi-target-on-red-hat-enterprise-linux-7/
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_storage_devices/configuring-an-iscsi-target_managing-storage-devices
+
+Disable CHAP Authentication for LUN
+https://community.zyxel.com/en/discussion/5725/nas542-iscsi-without-chap-authentication
+
+1- create the LUN(s) and target via the webgui
+2- login to your zyxel via ssh (admin@nasaddress), BTW if your pass is longer than 14 chars, only use the first 14 chars, for some reason Zyxel allows you to choose a pass longer then 14 but only uses the first 14 chars.
+3- $ sudo -i (to get root)
+4- targetcli (this will open a shell where you can manage iscsi, use tab completion to get around in it)
+5- ls (to get an overview)
+6- cd /iscsi/iqn.2018-03.com.zyxel:targetname.randomstring/tpg1/ (again use tab completion, so cd /iscsi/iqn<tab><tab<tab<tab> etc. etc.)
+7- set attribute authentication=0
+8- set attribute generate_node_acls=1
+9- set attribute demo_mode_write_protect=0
+10- I also deleted the ACLS by doing; cd acls, delete iqn<tab><tab>
+11- exit
+11- targetcli saveconfig (normally if you exit targetcli, it will autosave, so this is just in case)
+..           ..
+
+[Ubuntu]
+apt install targetcli-fb
+
+[RHEL]
+yum install targetcli
+
+[tgt vs targetcli]
+https://www.reddit.com/r/debian/comments/txhesm/iscsi_target_targetcli_vs_tgt/
+
+
+
