@@ -1,0 +1,12 @@
+TUTORIALS AND COMMANDS
+https://www.golinuxcloud.com/
+
+https://github.com/SEV007/fav-commands
+https://www.golinuxcloud.com/linux-commands-cheat-sheet/
+https://haydenjames.io/90-linux-commands-frequently-used-by-linux-sysadmins/
+
+ethtool
+https://www.baeldung.com/linux/using-ethtool
+
+[less with color]
+less -r
